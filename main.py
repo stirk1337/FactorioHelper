@@ -1,7 +1,10 @@
+from kivy.graphics import Color, Rectangle
 from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.app import App
+from kivy.uix.image import Image
+from kivy.uix.scatterlayout import ScatterLayout
 
 Builder.load_file('action.kv')
 
@@ -11,6 +14,22 @@ visited_screens = []
 class DefaultScreen(Screen):
     def add_screen(self, screen):
         visited_screens.append(screen)
+
+    def go_to_picture(self, screen, source):
+        global pictureScreen
+        pictureScreen.clear_widgets()
+        pictureScreen.canvas.add(Color(.20, .20, .20, 1))
+        pictureScreen.canvas.add(Rectangle(pos = self.pos, size = self.size))
+
+        sm.transition.direction = 'left'
+        sm.current = 'picture'
+        visited_screens.append(screen)
+
+        scatter = ScatterLayout(do_rotation=False)
+        image = Image(source=source, allow_stretch = True)
+        scatter.add_widget(image)
+        pictureScreen.add_widget(scatter)
+
 
 class MenuScreen(DefaultScreen):
     pass
@@ -35,9 +54,16 @@ class BlueScreen(DefaultScreen):
 class BlackScreen(DefaultScreen):
     pass
 
+
 class DefenceScreen(DefaultScreen):
     pass
 
+
+class PictureScreen(Screen):
+    pass
+
+
+pictureScreen = PictureScreen(name='picture')
 
 sm = ScreenManager()
 
@@ -66,6 +92,7 @@ class App(MDApp):
         sm.add_widget(BlueScreen(name='blue'))
         sm.add_widget(BlackScreen(name='black'))
         sm.add_widget(DefenceScreen(name='defence'))
+        sm.add_widget(pictureScreen)
         return sm
 
 

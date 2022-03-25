@@ -38,6 +38,7 @@
 <DefaultScrollView@ScrollView>:
     effect_cls: 'ScrollEffect'
 
+
 <MenuScreen>:
     BoxLayout:
         canvas:
@@ -98,44 +99,54 @@
                 text: 'Добро пожаловать новичок или уже не новичок, этот гайд предназначен для всех. Он поможет тебе пройти все этапы игры от копания киркой железной руды, до запуска ракеты! Так же по пути игры после каждого этапа вам будет показываться прогресс нашего [color=#FA8C1C]Новичка[/color] и указывать на его ошибки, чтобы вы их не допустили. Но чтобы нам приступить к самому прохождению важно знать полезные фишки игры. Начнём! \n1. При нажатии на кнопку [color=#FA8C1C]alt[/color] включается/выключается Alt-режим. Он позволяет увидеть подробную информацию, что где хранится или увидеть, что производит та или иная машина'
             DefaultImage:
                 source: 'source/gif/0/0_0.gif'
+                on_touch_down: root.go_to_picture('start', 'source/gif/0/0_0.gif')
             DefaultLabel:
                 text: '2. Очистить курсор от предмета можно нажатием [color=#FA8C1C]Q[/color], это вернёт его в инвентарь.'
             DefaultImage:
                 source: 'source/gif/0/0_1.gif'
+                on_touch_down: root.go_to_picture('start', 'source/gif/0/0_1.gif')
             DefaultLabel:
                 text: '3. Так же если навестить на объект и нажать [color=#FA8C1C]Q[/color], если он есть у игрока в инвентаре, то он сразу выберется для строительства.'
             DefaultImage:
                 source: 'source/gif/0/0_2.gif'
+                on_touch_down: root.go_to_picture('start', 'source/gif/0/0_2.gif')
             DefaultLabel:
                 text: '4. Перенос пачек:\n1) [color=#FA8C1C]Shift + Левая кнопка мыши[/color] переносит одну пачку.\n2) [color=#FA8C1C]Ctrl + Левая кнопка мыши[/color] переносит все пачки одного типа.\n3) [color=#FA8C1C]Ctrl + Левая кнопка мыши[/color] по пустой ячейке перенесёт все предметы из инвентаря.\n4) если вместо [color=#FA8C1C]ЛКМ[/color] нажать [color=#FA8C1C]ПКМ[/color] по предмету, то будет переноситься половина предметов в пачке.'
             DefaultImage:
                 source: 'source/gif/0/0_3.gif'
+                on_touch_down: root.go_to_picture('start', 'source/gif/0/0_3.gif')
             DefaultLabel:
                 text: '5. Перенос объектов:\n1) [color=#FA8C1C]Ctrl + Левая кнопка мыши[/color] по объекту извлекает предметы из него.\n2) [color=#FA8C1C]Ctrl + Левая кнопка мыши[/color] с предметом в курсоре помещает предмет в него.'
             DefaultImage:
                 source: 'source/gif/0/0_4.gif'
+                on_touch_down: root.go_to_picture('start', 'source/gif/0/0_4.gif')
             DefaultLabel:
                 text: '6. Нажмите [color=#FA8C1C]Z[/color] чтобы сбросить один предмет из курсора'
             DefaultImage:
                 source: 'source/gif/0/0_5.gif'
+                on_touch_down: root.go_to_picture('start', 'source/gif/0/0_5.gif')
             DefaultLabel:
                 text: '7. Чтобы взять все предметы с земли зажмите [color=#FA8C1C]F[/color]'
             DefaultImage:
                 source: 'source/gif/0/0_6.gif'
+                on_touch_down: root.go_to_picture('start', 'source/gif/0/0_6.gif')
             DefaultLabel:
                 text: '8. Как создать больше одного предмета? Легко!\n1) Нажмите [color=#FA8C1C]Правую кнопку мыши[/color] по рецепту для создания 5 штук.\n2) [color=#FA8C1C]Shift + Левая кнопка мыши[/color] по рецепту для создания максимально возможного количества предметов.\n9. Быстрый доступ к предметам из инвентаря.\n1) Чтобы зафиксировать предмет на панели быстрого доступа, нужно просто нажать [color=#FA8C1C]Левой кнопкой мыши[/color] предметом в свободной ячейке панели быстрого доступа.\n2) Нажмите цифры от [color=#FA8C1C]1-0[/color], чтобы взять предмет из панели.\n3) Нажмите [color=#FA8C1C]Cреднюю кнопку мыши[/color] по предмету, чтобы убрать его из панели. '
             DefaultImage:
                 source: 'source/gif/0/0_7.gif'
+                on_touch_down: root.go_to_picture('start', 'source/gif/0/0_7.gif')
                 height: 600
             DefaultLabel:
                 text: '4) У панели быстрого доступа есть несколько таких панелей, пронумерованных от [color=#FA8C1C]0 до 9[/color], в который вы можете поставить различные предметы для более удобной игры.'
             DefaultImage:
                 source: 'source/gif/0/0_8.png'
+                on_touch_down: root.go_to_picture('start', 'source/gif/0/0_8.png')
                 height: 600
             DefaultLabel:
                 text: '5) Нажмите [color=#FA8C1C]X[/color], чтобы поменять местами активные панели быстрого доступа.'
             DefaultImage:
                 source: 'source/gif/0/0_9.gif'
+                on_touch_down: root.go_to_picture('start', 'source/gif/0/0_9.gif')
                 height: 100
             ArticleButton:
                 text: '[color=#FA8C1C]I[/color] Красное пиво'
@@ -400,16 +411,12 @@
 
 
 
-
-
 <GreenScreen>:
-    MDBoxLayout:
-        orientation: "vertical"
-        Button:
-            text: 'My settings button'
-        Button:
-            text: 'Back to menu'
-            on_press: root.manager.current = 'menu'
+    ScatterLayout:
+        DefaultScrollView:
+            DefaultBoxLayout:
+                DefaultLabel:
+                    text: 'gg ne budet' * 100
 
 <BlueScreen>:
     MDBoxLayout:

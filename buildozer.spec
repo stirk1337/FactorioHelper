@@ -22,7 +22,7 @@ source.include_exts = py,png,jpg,kv,atlas,gif,ttf
 #source.exclude_exts = spec
 
 # (list) List of directory to exclude (let empty to not exclude anything)
-#source.exclude_dirs = tests, bin
+source.exclude_dirs = exclude, venv, bin, __pycache__, .idea
 
 # (list) List of exclusions using pattern matching
 #source.exclude_patterns = license,images/*/*.jpg
@@ -36,11 +36,12 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3, pillow, cmake, kivyMD, kivy
+requirements = python3, pillow, cmake, kivyMD, setuptools, kivy, hostpython3
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
-requirements.source.kivy = venv/Lib/site-packages/kivy
+#requirements.source.kivy = /mnt/c/Users/stirk/PycharmProjects/FactorioHelper/venv/Lib/site-packages/kivy
+#requirements.source.kivy = venv/Lib/site-packages/kivy
 
 # (list) Garden requirements
 #garden_requirements =

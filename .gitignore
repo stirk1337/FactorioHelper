@@ -3,3 +3,4 @@
 /.buildozer
 /venv
 /bin
+/__pycache__

@@ -26,7 +26,7 @@ class DefaultScreen(Screen):
         visited_screens.append(screen)
 
         scatter = ScatterLayout(do_rotation=False)
-        image = Image(source=source, allow_stretch = True)
+        image = Image(source=source, allow_stretch = True, anim_delay = 0.1)
         scatter.add_widget(image)
         pictureScreen.add_widget(scatter)
 

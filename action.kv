@@ -95,6 +95,9 @@
 <StartScreen>:
     DefaultScrollView:
         DefaultBoxLayout:
+            DefaultImage:
+                source: 'source/gif/0/0_start.jpg'
+                on_touch_down: root.go_to_picture('start', 'source/gif/0/0_start.jpg')
             DefaultLabel:
                 text: 'Добро пожаловать новичок или уже не новичок, этот гайд предназначен для всех. Он поможет тебе пройти все этапы игры от копания киркой железной руды, до запуска ракеты! Так же по пути игры после каждого этапа вам будет показываться прогресс нашего [color=#FA8C1C]Новичка[/color] и указывать на его ошибки, чтобы вы их не допустили. Но чтобы нам приступить к самому прохождению важно знать полезные фишки игры. Начнём! \n1. При нажатии на кнопку [color=#FA8C1C]alt[/color] включается/выключается Alt-режим. Он позволяет увидеть подробную информацию, что где хранится или увидеть, что производит та или иная машина'
             DefaultImage:
@@ -162,62 +165,77 @@
         DefaultBoxLayout:
             DefaultImage:
                 source: 'source/gif/1/0_0.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/0_0.png')
             DefaultLabel:
                 text: 'Как только вы потерпели крушение и посмотрели кат-сцену, сломайте все части сломанного корабля зажав на объекте [color=#FA8C1C]Правой кнопкой мыши[/color] или соберите из них всё содержимое, как из сундуков, нажав на них [color=#FA8C1C]Левой кнопкой мыши[/color]. Осмотрите свои “владения” на данный момент вы должны увидеть стартовые руды: [color=#FA8C1C]железо, медь, камень, уголь[/color] (чтобы лучше видеть окружение откройте карту на [color=#FA8C1C]М[/color]).'
             DefaultImage:
                 source: 'source/gif/1/0_1.jpg'
                 height: 150
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/0_1.jpg')
             DefaultLabel:
                 text: 'Первая ваша цель, сделать автоматизацию добычи [color=#FA8C1C]угля[/color], для этого найдите на карте жилу [color=#FA8C1C]угля[/color] и поставьте на нём твердотопливный бур и возле него [color=#FA8C1C]печку[/color], таким образом:'
             DefaultImage:
                 source: 'source/gif/1/0_2.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/0_2.png')
             DefaultLabel:
                 text: 'Теперь добудьте несколько кусочков [color=#FA8C1C]угля[/color], чтобы [color=#FA8C1C]твердотопливный бур[/color] заработал и начал закидывать добытый уголь в печку. Дальше бегите на жилу с железом и добудьте [color=#FA8C1C]9[/color] штучек [color=#FA8C1C]железной руды[/color], затем бегите на жилу с камнем и добудьте [color=#FA8C1C]5[/color] штук [color=#FA8C1C]камня[/color] (так же камень можно получить, ломая большие камни)'
             DefaultImage:
                 source: 'source/gif/1/0_3.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/0_3.png')
             DefaultLabel:
                 text: 'Пока бежите обратно к [color=#FA8C1C]углю[/color] создайте [color=#FA8C1C]печку[/color] (чтобы зайти в инвентарь нажмите [color=#FA8C1C]E[/color]. Во вкладке [color=#FA8C1C]рецепты[/color] будут показаны все возможные вам на данный момент рецепты)'
             DefaultImage:
                 source: 'source/gif/1/0_4.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/0_4.png')
             DefaultLabel:
                 text: 'Когда добежите до [color=#FA8C1C]угля[/color] киньте всю [color=#FA8C1C]железную руду[/color] в [color=#FA8C1C]печку[/color]. Вам нужно [color=#FA8C1C]9 железных пластин[/color] и [color=#FA8C1C]1 печка[/color], чтобы создать второй [color=#FA8C1C]твердотопливный бур[/color]. И поставить его вот так: '
             DefaultImage:
                 source: 'source/gif/1/0_5.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/0_5.png')
             DefaultLabel:
                 text: 'Поздравляем! Вы сделали первый шаг к созданию [color=#FA8C1C]ракеты[/color], продолжайте в том же духе!\nДальше ваша цель поставить на [color=#FA8C1C]камень твердотопливный бур[/color] и [color=#FA8C1C]деревянный сундук[/color] или [color=#FA8C1C]железный[/color] (но [color=#FA8C1C]железо[/color] нам важно!)'
             DefaultImage:
                 source: 'source/gif/1/6.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/6.png')
             DefaultLabel:
                 text: 'Теперь надо реализовать мини добычу [color=#FA8C1C]железа[/color] и [color=#FA8C1C]меди[/color].(не забывайте подкидывать [color=#FA8C1C]уголь[/color]!) Делается она так: '
             DefaultImage:
                 source: 'source/gif/1/7.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/7.png')
             DefaultLabel:
                 text: 'Теперь когда мы можно сказать нормализовали добычу [color=#FA8C1C]камня, железа, меди и угля[/color], можно поставить первую мини [color=#FA8C1C]цель[/color], а именно завод  [color=#FA8C1C]автоматизированный исследовательских пакетов[/color]. Приступим!\n\n1. Возможно вам уже надоело носить [color=#FA8C1C]уголь[/color] в  [color=#FA8C1C]твердотопливные буры[/color] и у нас есть для вас [color=#FA8C1C]решение[/color]! [color=#FA8C1C]Электрические буры[/color], но для них нам нужно [color=#FA8C1C]электричество[/color], поэтому вам нужно сделать [color=#FA8C1C]1 Бойлер, 1 Насос и 1 Паровой двигатель[/color]. Бегайте по своим добычам и собирайте нужное для крафта. Если вы думаете, что [color=#FA8C1C]железо[/color] добывается слишком [color=#FA8C1C]медленно[/color] и хотелось бы [color=#FA8C1C]побыстрее[/color]. Решение есть, просто поставьте ещё один [color=#FA8C1C]твердотопливный бур[/color] рядом с [color=#FA8C1C]печкой[/color] и теперь они в двоём будут кидать [color=#FA8C1C]уголь[/color] в одну [color=#FA8C1C]печку[/color], что немного [color=#FA8C1C]ускорит[/color] процесс, но вы скажете, почему бы не поставить ещё один [color=#FA8C1C]бур[/color], будет же ещё [color=#FA8C1C]быстрее[/color]! Но нет, тогда [color=#FA8C1C]печь[/color] [color=#FA8C1C]не будет успевать[/color] переплавить всё, что ей дают [color=#FA8C1C]буры[/color] и она [color=#FA8C1C]переполнится[/color] и будет всё точно так же, поэтому лучше сделать так:'
             DefaultImage:
                 source: 'source/gif/1/8.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/8.png')
             DefaultLabel:
                 text: '2. Когда всё скрафтили, нужно подойти к месту, где есть [color=#FA8C1C]вода[/color] и поставить всё примерно таким образом(можете сделать как вам удобно главное, чтобы [color=#FA8C1C]трубы[/color] соединяли нужное с нужным). Важно смотреть на стрелочки в [color=#FA8C1C]Alt режиме[/color](этап [color=#FA8C1C]0[/color]), стрелочка в обе стороны показвает, что он может и принимать и отдавать из этой точки. Следите внимательно, что куда входит, и что откуда выходит!'
             DefaultImage:
                 source: 'source/gif/1/9.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/9.png')
             DefaultLabel:
                 text: '3. Положите [color=#FA8C1C]уголь[/color] в [color=#FA8C1C]бойлер[/color] и [color=#FA8C1C]пар[/color] дойдёт до [color=#FA8C1C]парового двигателя[/color], но почему-то, ничего не работает, а всё потому, что нам нужно направлять куда-то [color=#FA8C1C]энергия[/color], пока что она даже не вырабатывается, ведь не куда. Создайте несколько [color=#FA8C1C]деревянных опор ЛЭП[/color] (чтобы добыть дерево надо подойти к дереву на карте и начать рубить, как будто добываете руду).\n\n4. Проведите линию [color=#FA8C1C]ЛЭП[/color] от [color=#FA8C1C]парового двигателя[/color](обязательно убедитесь, что жёлтый значок перестал моргать, это значит, что [color=#FA8C1C]паровой двигатель[/color] подключился к некоторой системе [color=#FA8C1C]ЛЭП[/color]) до [color=#FA8C1C]железа[/color].\n\nПолезная информация!: Если зажать [color=#FA8C1C]Левую кнопку мыши[/color] держа [color=#FA8C1C]ЛЭП[/color] и бежать в какую либо сторону, [color=#FA8C1C]ЛЭП[/color] будут ставиться [color=#FA8C1C]автоматически[/color] на максимально возможном расстоянии.'
             DefaultImage:
                 source: 'source/gif/1/10.gif'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/10.gif')
             DefaultLabel:
                 text: '5. Пришло время улучшить буры! Сделайте [color=#FA8C1C]3 электрических бура[/color] и поставьте их таким образом(не забудье подключить [color=#FA8C1C]ЛЭП[/color] к [color=#FA8C1C]бурам[/color], синий квадрат это область на которой раздаётся энергия и если машина стоит в ней, то она получает энергию): '
             DefaultImage:
                 source: 'source/gif/1/12.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/12.png')
             DefaultLabel:
                 text: '6. Таким же образом сделайте на [color=#FA8C1C]меди[/color], а на камне просто замените [color=#FA8C1C]твердотопливный бур[/color] на [color=#FA8C1C]электрический[/color], ещё можете [color=#FA8C1C]сундук[/color] заменить на [color=#FA8C1C]железный[/color].\n\n7. Супер! Вы сделали уже свой первый завод на котором добывается всё, что вам нужно. Теперь начнём исследовать новые [color=#FA8C1C]технологии[/color]. Для этого создайте [color=#FA8C1C]лабораторию[/color]. '
             DefaultImage:
                 source: 'source/gif/1/13.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/13.png')
             DefaultLabel:
                 text: 'Мы видим [color=#FA8C1C]пакеты[/color] с различными жидкостями внутри. На данный момент мы пытаемся создать завод пакета [color=#FA8C1C]красного цветах[/color] (для сокращения названия пакетов, решено использовать их цвета в названии).\n\nРекомендую посмотреть на список [color=#FA8C1C]исследований[/color], нажав на [color=#FA8C1C]T[/color], их там очень много, поэтому надо уметь выбирать только важное. Для начало нам надо исследовать [color=#FA8C1C]“Автоматизацию”[/color], чтобы сделать завод по производству [color=#FA8C1C]красных пакетов[/color]. Нажмите на исследование два раза [color=#FA8C1C]Левой кнопкой мыши[/color], или нажмите на кнопку [color=#FA8C1C]“начать исследование”[/color] в меню исследований.\n\n8. Сделайте [color=#FA8C1C]10 красных пакетов[/color] и положите их в [color=#FA8C1C]лабораторию[/color] (не забудьте подключить лабораторию к энергии).\n\nПока всё исследуется прочитайте [color=#FA8C1C]полезную информацию[/color]: Возможно, вы не знали, но ваш завод [color=#FA8C1C]загрязняет[/color] природу. Чтобы увидеть его зайдите на карту, нажав [color=#FA8C1C]M[/color], нажмите на красный значок и у вас появятся красные квадраты, они и есть ваше [color=#FA8C1C]загрязнение[/color].'
             DefaultImage:
                 source: 'source/gif/1/14.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/14.png')
                 height: 150
             DefaultImage:
                 source: 'source/gif/1/15.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/15.png')
             DefaultLabel:
                 text: 'Следите за [color=#FA8C1C]загрязнением[/color], ведь в какой-то момент на вас могут напасть обитатели этой планеты. Если на вас уже [color=#FA8C1C]напали[/color], рекомендуем перейти к этапу “Защита базы”, нажав по кнопке ниже'
             ArticleButton:
@@ -230,19 +248,23 @@
                 text: 'На карте есть красные точки (может быть у вас их и не быть), это и есть обитатели этой планеты от которых вам надо будет защищаться. Но если ваше [color=#FA8C1C]загрязнение[/color] не доходит до этих точек, то вам не о чем волноваться, они нападут на вас, когда [color=#FA8C1C]загрязнение[/color] дойдёт до них.'
             DefaultImage:
                 source: 'source/gif/1/16.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/16.png')
             DefaultLabel:
                 text: '9. А зачем мы что-то исследовали и что же нам за это дали? Если вы сейчас зайдёте в [color=#FA8C1C]инвентарь[/color] вы увидите [color=#FA8C1C]жёлтые восклицательные знаки[/color], это значит, что вы что-то получили в этой [color=#FA8C1C]категории[/color]. При нажатии на [color=#FA8C1C]категории[/color] вы увидите подсвеченный предмет, это и есть новый предмет полученный с исследования. А ещё можно смотреть в самом исследовании написано [color=#FA8C1C]“Результат”[/color] и там можно посмотреть, что вы получите если исследуете его. Ещё написано [color=#FA8C1C]“Стоимость”[/color], оно показывает сколько ты потратишь на это исследование [color=#FA8C1C]пакетов[/color] и сколько каждый исследуется по времени. Именно для этого мы создали [color=#FA8C1C]10 пакетов[/color]. Написано, что [color=#FA8C1C]1 пакет[/color] исследуется [color=#FA8C1C]10 секунд (значок с таймером)[/color], а потом [color=#FA8C1C]умножить на 10[/color], следовательно получаем [color=#FA8C1C]10 пакетов[/color], где каждый исследуется по [color=#FA8C1C]10 секунд[/color].'
             DefaultImage:
                 source: 'source/gif/1/17.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/17.png')
             DefaultLabel:
                 text: '10. Но что же мы получили за наше первое [color=#FA8C1C]исследование[/color]? \n1) [color=#FA8C1C]Сборочный автомат[/color]. Он [color=#FA8C1C]автоматически![/color] создаёт предмет по рецепту, который вы выбрали. Если выбрать рецепт, то мы увидим меню создания рецепта. Для примера был выбран рецепт [color=#FA8C1C]железных шестерёнок[/color], если положить в сборщик [color=#FA8C1C]2 слитка железа[/color], то мы получим [color=#FA8C1C]1 шестерню[/color].'
             DefaultImage:
                 source: 'source/gif/1/18.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/18.png')
             DefaultLabel:
                 text: 'Меню [color=#FA8C1C]сборщика[/color]'
                 halign: 'center'
             DefaultImage:
                 source: 'source/gif/1/19.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/19.png')
             DefaultLabel:
                 text: 'Меню создания [color=#FA8C1C]рецепта[/color]'
                 halign: 'center'
@@ -250,55 +272,68 @@
                 text: '2) [color=#FA8C1C]Длинный манипулятор[/color]. Как так получилось, что вы уже получили [color=#FA8C1C]длинные манипуляторы[/color], но не использовали обычные, неужели они бесполезны? Нет, просто вы пока могли легко обойтись без них. [color=#FA8C1C]Манипулятор[/color] отличается от [color=#FA8C1C]Длинного манипулятора[/color] дальностью передачи и скоростью поворота. [color=#FA8C1C]Длинный манипулятор[/color] передаёт дальше и двигается быстрее, чем [color=#FA8C1C]манипулятор[/color], но рекомендуется его ставить, когда надо перенести предмет на дальнее расстояние, просто так их ставить не желательно.'
             DefaultImage:
                 source: 'source/gif/1/20.gif'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/20.gif')
             DefaultLabel:
                 text: '11. Исследуйте [color=#FA8C1C]“Логистику”[/color], для этого создайте [color=#FA8C1C]20 красных пакетов[/color] и положите в [color=#FA8C1C]лабораторию[/color]. Поставьте больше [color=#FA8C1C]лабораторий[/color], чтобы исследовать несколько [color=#FA8C1C]пакетов[/color] за раз! [color=#FA8C1C]10 красных пакетов[/color] в одну [color=#FA8C1C]лабораторию[/color], остальный в другую.'
             DefaultImage:
                 source: 'source/gif/1/21.png'
                 height: 200
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/21.png')
             DefaultLabel:
                 text: 'Что мы получили:\n1) [color=#FA8C1C]Подземный конвейер[/color]. Позволяет проводить конвейер с ресурсами под землёй.'
             DefaultImage:
                 source: 'source/gif/1/22.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/22.png')
             DefaultLabel:
 	            text: '[color=#FA8C1C]Полезная информация![/color]: Если зажать [color=#FA8C1C]Левую кнопку мыши[/color] держа [color=#FA8C1C]подземный конвейер[/color] и в бежать в какую либо сторону, [color=#FA8C1C]подземный конвейер[/color] будет ставиться автоматически на максимально возможном расстоянии. '
             DefaultImage:
 	            source: 'source/gif/1/23.gif'
+	            on_touch_down: root.go_to_picture('red', 'source/gif/1/23.gif')
             DefaultLabel:
 	            text: '2) [color=#FA8C1C]Разделитель[/color]. Объединяет или разделяет входящий поток с конвейеров в соотношении 1:1'
             DefaultImage:
 	            source: 'source/gif/1/24.gif'
+	            on_touch_down: root.go_to_picture('red', 'source/gif/1/24.gif')
             DefaultLabel:
                 text: '[color=#FA8C1C]Полезная информация![/color]: Если нажать по [color=#FA8C1C]разделителю Левой кнопкой мыши[/color], то откроется [color=#FA8C1C]меню[/color]. \n[color=#FA8C1C]Приоритет входа[/color] (например влево), то пока левый [color=#FA8C1C]конвейер[/color] полностью не опустошится, правый [color=#FA8C1C]конвейер[/color] не будет опустошаться и ресурсы будут стоять.\n[color=#FA8C1C]Приоритет выхода[/color](например вправо), то ресурсы будут выходить ток через правый конвейер. \n[color=#FA8C1C]Фильтр[/color], [color=#FA8C1C]разделитель[/color] будет пропускать на выход, только указанный ресурс.'
             DefaultImage:
                 source: 'source/gif/1/25.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/25.png')
             DefaultLabel:
                 text: '12. Пока исследуется, надо задуматься об улучшении завода [color=#FA8C1C]железных пластин[/color], но для этого нам надо улучшить нашу [color=#FA8C1C]энергию[/color]. Чтобы не носить [color=#FA8C1C]уголь[/color] к [color=#FA8C1C]бойлерам[/color], нужно поставить [color=#FA8C1C]два бура[/color] отдельно на [color=#FA8C1C]угле[/color] и направить [color=#FA8C1C]конвейеры[/color] прямо до [color=#FA8C1C]бойлеров[/color]. [color=#FA8C1C]Конвейеры[/color] переносят предметы  на любое расстояние и [color=#FA8C1C]без электричества[/color]! Так что если вы замечаете, что вы часто бегаете от одного объекта до другого, то надо соединить [color=#FA8C1C]конвейерами[/color] и [color=#FA8C1C]автоматизировать[/color] доставку ресурсов. [color=#FA8C1C]Манипуляторы[/color] могут складывать / выкладывать предметы из установок, здесь у нас [color=#FA8C1C]манипулятор[/color] складывает [color=#FA8C1C]уголь[/color] в [color=#FA8C1C]бойлер[/color]. Ещё тут использованы [color=#FA8C1C]подземные трубы[/color], они позволяют проводить [color=#FA8C1C]трубы[/color] под землёй на некоторое расстояние. Когда вы всё это сделает у вас должно быть [color=#FA8C1C]3.6 МВт энергии[/color]. '
             DefaultImage:
                 source: 'source/gif/1/26.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/26.png')
             DefaultLabel:
                 text: '13. Когда [color=#FA8C1C]энергия готова[/color], пора сделать производство [color=#FA8C1C]железных пластин[/color]. Ставим [color=#FA8C1C]8 электрических буров[/color], причём 4 по одну сторону конвейера, другие 4 по другую сторону. Дальше сделать точно так же с [color=#FA8C1C]углём[/color] и доставить всё [color=#FA8C1C]конвейреами[/color] в одно место (главное смотрите, чтобы рядом было место, а то печки не влезут.) Ставим [color=#FA8C1C]10 печек[/color], 5 с одной стороны, 5 с другой, при этом не вплотную, а через одного, это позволит нам ставить [color=#FA8C1C]ЛЭП[/color] между ними и питать [color=#FA8C1C]манипуляторы[/color]. Дальше ставим [color=#FA8C1C]20 манипуляторов[/color], 10 у нас принимают [color=#FA8C1C]железную руду / уголь[/color], другие принимают [color=#FA8C1C]железные пластины[/color] с [color=#FA8C1C]печек[/color], и под конец ставим [color=#FA8C1C]10 длинных манипуляторов[/color], который будут принимать с дальнего конвейера [color=#FA8C1C]железную руду / уголь[/color]. Ещё рекомендую поставить [color=#FA8C1C]сундук[/color], который будет собирать немного [color=#FA8C1C]железа[/color]. '
             DefaultImage:
                 source: 'source/gif/1/27.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/27.png')
             DefaultLabel:
                 text: '14. Сделайте также с [color=#FA8C1C]медью[/color]. Желательно сделать так, чтобы всё было рядом:'
             DefaultImage:
                 source: 'source/gif/1/28.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/28.png')
             DefaultLabel:
                 text: '15. Пришло время делать завод [color=#FA8C1C]красных пакетов[/color]. Для их производства нужна [color=#FA8C1C]1 железная шестерня[/color] и [color=#FA8C1C]1 медная пластина[/color], производство [color=#FA8C1C]медных пластин[/color] у нас уже есть, остались [color=#FA8C1C]железные шестерёнки[/color]. Вот теперь нам понадобятся [color=#FA8C1C]сборочные автоматы[/color], которые мы исследовали ранее. Схема мини завода [color=#FA8C1C]железных шестерёнок[/color], которого нам хватит на какое-то время: '
             DefaultImage:
                 source: 'source/gif/1/29.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/29.png')
             DefaultLabel:
                 text: '16. Нужно выделить отдельное место для [color=#FA8C1C]лабораторий[/color] и для производства [color=#FA8C1C]пакетов[/color], чтобы мы могли потом расширять наше производство [color=#FA8C1C]пакетов[/color] и поставлять их в лаборатории в будущем.\n\nСхема производства [color=#FA8C1C]красных пакетов[/color] и расположения [color=#FA8C1C]лабораторий[/color]:  '
             DefaultImage:
                 source: 'source/gif/1/30.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/30.png')
             DefaultLabel:
                 text: 'Вам наверное стало интересно, почему между [color=#FA8C1C]лабораториями[/color] находится [color=#FA8C1C]манипулятор[/color]. Ответ простой, чем больше [color=#FA8C1C]лабораторий[/color] работает одновременно, тем [color=#FA8C1C]быстрее[/color] исследуется [color=#FA8C1C]технология[/color]. [color=#FA8C1C]Манипулятор[/color] передаёт [color=#FA8C1C]пакет[/color] из одной [color=#FA8C1C]лаборатории[/color] в другую, до тех пор, пока [color=#FA8C1C]лаборатория[/color] в которую он передаёт не заполнится этим [color=#FA8C1C]пакетом[/color]. Таким образом получается компактная автоматизация заполнения [color=#FA8C1C]лабораторий пакетами[/color] и она расширяема!\n\n17. Теперь пора исследовать!'
             DefaultImage:
                 height: 150
                 source: 'source/gif/1/31.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/31.png')
             DefaultImage:
                 height: 150
                 source: 'source/gif/1/32.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/32.png')
             DefaultLabel:
                 text: 'Это [color=#FA8C1C]технологии[/color], которые вы можете сделать прямо сейчас без каких-либо проблем, но нам не нужны они все. Некоторые нам пока не важны, либо вообще бесполезны.\n\nВажные нам [color=#FA8C1C]технологии[/color]: Пулемётная турель, Каменная стена, Военная промышленность, Электроника, Быстрый манипулятор, Производство стали, Тяжёлая броня,  Логистический исследовательский пакет.\n\n[color=#FA8C1C]Не совсем важные[/color]: Оптика, Скорострельность оружия 1, Огнестрельный урон 1.\n\n[color=#FA8C1C]Бесполезные[/color]: Стальной инструмент.\n\nПока исследуется расскажем, что делает каждая [color=#FA8C1C]технология[/color].\n\n1) [color=#FA8C1C]Пулумётная турель[/color]. Открывает [color=#FA8C1C]турель[/color], которая будет сражаться за вас и защищать вашу базу от [color=#FA8C1C]монстров[/color]. Для неё подойдут любые [color=#FA8C1C]патроны[/color]. Зелёная зона, это дальность стрельбы [color=#FA8C1C]турели[/color]. Подробнее про защиту говорится в этапе “Защита базы” . Если на вас уже напали, рекомендуем перейти к этапу "Защита базы"'
             ArticleButton:
@@ -309,49 +344,61 @@
                     root.add_screen('red')
             DefaultImage:
                 source: 'source/gif/1/33.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/33.png')
             DefaultLabel:
                 text: '2) [color=#FA8C1C]Каменная стена[/color]. Открывает [color=#FA8C1C]каменную стену[/color], теперь к вам никто не пройдёт на базу, пока не сломает вашу [color=#FA8C1C]каменную стену[/color]. Подробнее про защиту говорится в этапе “Защита базы”: '
             DefaultImage:
                 source: 'source/gif/1/34.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/34.png')
             DefaultLabel:
                 text: '3) [color=#FA8C1C]Военная промышленность[/color]. Открывает [color=#FA8C1C]пистолет-пулемёт, дробовик и патроны для дробовика[/color]. Из этого всего нам нужен только [color=#FA8C1C]пистолет-пулемёт[/color], который заменит наш слабенький [color=#FA8C1C]пистолет[/color]. На начальном этапе монстры будут расстворяться от него.'
             DefaultImage:
                 source: 'source/gif/1/35.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/35.png')
                 height: 150
             DefaultLabel:
                 text: '4) [color=#FA8C1C]Электроника[/color]. Не открывает новых предметов, но открывает двери в новую ветку [color=#FA8C1C]технологий[/color].\n\n5) [color=#FA8C1C]Быстрый манипулятор[/color]. Открывает [color=#FA8C1C]быстрый манипулятор и фильтрующий манипулятор[/color]. Быстрый манипулятор, это замена обычному [color=#FA8C1C]манипулятору[/color], можно спокойно его заменять, но перед этим желательно сделать завод обычных [color=#FA8C1C]манипуляторов[/color].'
             DefaultImage:
                 source: 'source/gif/1/36.gif'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/36.gif')
             DefaultLabel:
                 text: '[color=#FA8C1C]Фильтрующий манипулятор[/color]. По скорости передачи такой же как и [color=#FA8C1C]быстрый манипулятор[/color], но он умеет ещё [color=#FA8C1C]фильтровать[/color]. В меню [color=#FA8C1C]фильтрующего манипулятора[/color] есть ползунок с белым списком и чёрным списком. [color=#FA8C1C]Белый список[/color]: он будет брать только те предметы, которые указаны в списке предметов. [color=#FA8C1C]Чёрный список[/color]: игнорирует только те предметы, которые указаны в списке предметов.'
             DefaultImage:
                 source: 'source/gif/1/37.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/37.png')
             DefaultImage:
                 source: 'source/gif/1/38.gif'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/38.gif')
             DefaultLabel:
                 text: '6) [color=#FA8C1C]Производство стали[/color]: Открывает [color=#FA8C1C]стальную балку[/color] и [color=#FA8C1C]стальной сундук[/color]. [color=#FA8C1C]Стальная балка[/color] это предмет важный для следующих рецептов. [color=#FA8C1C]Стальной сундук[/color] это замена [color=#FA8C1C]железнуму сундуку[/color], ведь в нём хранится на [color=#FA8C1C]16[/color] предметов больше.\n\n7) [color=#FA8C1C]Тяжёлая броня[/color]. Замена [color=#FA8C1C]лёгкой броне[/color], потому что на [color=#FA8C1C]3%[/color] лучше защищает от физического [color=#FA8C1C]урона[/color].\n\n8) [color=#FA8C1C]Логистический исследовательский пакет[/color]. Наша следующая цель, подробнее говорится в “этап 2”.\n\n9) [color=#FA8C1C]Оптика[/color]. Открывает [color=#FA8C1C]фонарь[/color], который ночью будет освещать вашу базу, но нам это не нужно, нам понадобится, что дальше изучается после неё по ветке, но про это подробнее говорится в “этап 2”. 10) [color=#FA8C1C]Скорострельность оружия 1[/color]. Увеличивает скорость стрельбы [color=#FA8C1C]пулями[/color] и [color=#FA8C1C]дробью[/color] на [color=#FA8C1C]10%[/color]. Т.к [color=#FA8C1C]исследование[/color] довольно долгое, то желательно [color=#FA8C1C]исследовать[/color], когда уже всё [color=#FA8C1C]исследовано[/color] и вы занимаетесь другим производством, или когда вы поняли, что вам хочется улучшить свою боевую мощь.\n\n11) [color=#FA8C1C]Огнестрельный урон 1[/color]. Увеличивает урон от [color=#FA8C1C]пуль, дроби[/color] на [color=#FA8C1C]10%[/color] и урон от пулемётных турелей на [color=#FA8C1C]10%[/color].\n\n12) [color=#FA8C1C]Стальной инструмент[/color]. Увеличивает скорость [color=#FA8C1C]ручной добычи[/color] на [color=#FA8C1C]100%[/color]. Абсолютно бесполезно, ведь у нас уже всё [color=#FA8C1C]автоматизировано[/color] и возвращаться к ручной добыче нет желания.\n\n18. Пока исследуются все наши [color=#FA8C1C]технологии[/color], давайте сделаем производство [color=#FA8C1C]быстрых манипуляторов[/color], чтобы не создавать их каждый раз. Первым шагом  нужно перестроить [color=#FA8C1C]электричество[/color]. Т.к каждый [color=#FA8C1C]бойлер[/color] может спокойно питать [color=#FA8C1C]2 паровых двигателя[/color], сделаем систему из [color=#FA8C1C]12 паровых двигателей[/color] и [color=#FA8C1C]6 бойлеров[/color]. Выглядит она вот так:'
             DefaultImage:
                 source: 'source/gif/1/39.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/39.png')
             DefaultLabel:
                 text: 'Дальше нужно сделать 2 колонну добычи [color=#FA8C1C]угля[/color]. Одна поставляет уголь в [color=#FA8C1C]бойлеры[/color], вторая в [color=#FA8C1C]печки[/color].'
             DefaultImage:
                 source: 'source/gif/1/40.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/40.png')
             DefaultLabel:
                 text: 'Проделываем тоже самое с [color=#FA8C1C]железной рудой[/color] т.к мы увеличиваем количество [color=#FA8C1C]печек[/color] переплавляющих железо в [color=#FA8C1C]2 раза![/color]'
             DefaultImage:
                 source: 'source/gif/1/41.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/41.png')
             DefaultLabel:
                 text: 'Схема расстановки [color=#FA8C1C]печек[/color] и доставки [color=#FA8C1C]железа[/color] к ним. Каждая колонна работает на 10 печек. Добычу [color=#FA8C1C]меди[/color] и переплавку оставляем неизменной. Ещё можете по пути строительства заменять все обычные [color=#FA8C1C]манипуляторы[/color] на [color=#FA8C1C]быстрые[/color]'
             DefaultImage:
                 source: 'source/gif/1/42.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/42.png')
             DefaultLabel:
                 text: 'Далее делаем производство [color=#FA8C1C]медных кабелей[/color] и [color=#FA8C1C]электросхем[/color] в виде таких колонн.'
             DefaultImage:
                 source: 'source/gif/1/43.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/43.png')
             DefaultLabel:
                 text: 'И финальным шагом будет производство [color=#FA8C1C]манипуляторов[/color] и [color=#FA8C1C]затем быстрых манипуляторов[/color] в виде такой компактной схемы. В [color=#FA8C1C]сундуке[/color] можете сами ограничить столько места, сколько вам нужно:'
             DefaultImage:
                 source: 'source/gif/1/44.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/44.png')
             DefaultLabel:
                 text: 'Новичок за работой!'
                 halign: 'center'
@@ -359,6 +406,7 @@
                 text: '\nПоздравляем вы прошли [color=#FA8C1C]первый этап[/color]. Теперь вы можете поставить игру на паузу и посмотреть на продвижение нашего [color=#FA8C1C]Новичка[/color]. Давайте посмотрим что он сделал за несколько часов игры.'
             DefaultImage:
                 source: 'source/gif/1/45.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/45.png')
             DefaultLabel:
                 text: 'База Новичка - панорама'
                 halign: 'center'
@@ -366,6 +414,7 @@
                 text: 'Выглядит пустовато издалека почти не видно, что здесь что-то вообще есть. Давайте рассмотрим всё по ближе.'
             DefaultImage:
                 source: 'source/gif/1/46.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/46.png')
             DefaultLabel:
                 text: 'База Новичка – Энергия'
                 halign: 'center'
@@ -373,6 +422,7 @@
                 text: 'Похоже [color=#FA8C1C]Новичку[/color] весело носить [color=#FA8C1C]уголь[/color] в [color=#FA8C1C]сундуки[/color] рядом с [color=#FA8C1C]бойлерами[/color]. \nПервая ошибка [color=#FA8C1C]Новичка[/color], это игнорирование доставку предметов на далёкие расстояние через конвейеры, он почему-то предпочёл носить всё [color=#FA8C1C]вручную[/color] и мы это увидим ещё не раз ещё. \nВторая ошибка, [color=#FA8C1C]хаотичная расстановка[/color]. [color=#FA8C1C]Новичок[/color] не задумывался о [color=#FA8C1C]планировании[/color] того, что строит, он просто расставил всё, чтобы работало, а как это расставлено его не волновало, что [color=#FA8C1C]очень плохо[/color], ведь дальше это может очень плохо обернуться.\nТретья ошибка, [color=#FA8C1C]незнаниех[/color] работы [color=#FA8C1C]бойлеров[/color] и [color=#FA8C1C]паровых двигателей[/color] и нежелание их понять. Как мы знаем один [color=#FA8C1C]бойлер[/color] может спокойно питать [color=#FA8C1C]2 паровых двигателя[/color], но здесь мы видим, что [color=#FA8C1C]2 бойлера[/color] питают [color=#FA8C1C]1 паровой двигатель[/color] и почему-то они питают его с двух разных сторон, что неправильно. Можем заметить, что стоит ещё один [color=#FA8C1C]паровой двигатель[/color], возможно [color=#FA8C1C]Новичку[/color] перестало хватать [color=#FA8C1C]энергии[/color] и он решил таким образом её увеличить, впихнув рядом ещё один [color=#FA8C1C]паровой двигатель[/color]. Таким образом он увеличивает свои проблемы в будущем, теперь ему надо [color=#FA8C1C]ещё больше угля[/color], чтобы питать это. Вывод, чаще бегать до угля и обратно.'
             DefaultImage:
                 source: 'source/gif/1/47.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/47.png')
             DefaultLabel:
                 text: 'База Новичка – Плавильня'
                 halign: 'center'
@@ -380,6 +430,7 @@
                 text: 'Что здесь не так? Выглядит как неплохая переплавка [color=#FA8C1C]железа[/color], но почему тогда в одной из печек лежит [color=#FA8C1C]медь[/color]. Если присмотреться к [color=#FA8C1C]сундукам[/color], то можно увидеть, что в них почему-то на разгрузку лежит [color=#FA8C1C]медная руда и железная руда[/color], а значит это уже не просто переплавка [color=#FA8C1C]железа[/color], но и ещё [color=#FA8C1C]меди[/color]. Наш [color=#FA8C1C]Новичок[/color] просто решил всё объеденить в одном месте. Почему это [color=#FA8C1C]плохо[/color]? Ведь, можно же просто поставить [color=#FA8C1C]разделитель[/color] и сортировать всё это. Всё потому, что это производство не интуитивно считаемо, очень сложно понять сколько будет производиться [color=#FA8C1C]железных[/color] или [color=#FA8C1C]медных пластин[/color] в минуту, это всё будет зависеть от того, что первее будет в печке [color=#FA8C1C]железо[/color] или [color=#FA8C1C]медь[/color]. Ещё может произойти такое, что производсто заполнится и [color=#FA8C1C]печки встанут[/color], а значит какой-то ресурс [color=#FA8C1C]перестанет[/color] производиться. Поэтому делайте [color=#FA8C1C]всё отдельно[/color] и не будет у вас проблем. Видно, что [color=#FA8C1C]Новичок[/color] носит сюда [color=#FA8C1C]железную и медную руду[/color] от жил сам. Также [color=#FA8C1C]железные пластины с медными[/color] хранятся в [color=#FA8C1C]сундуке[/color] и [color=#FA8C1C]Новичок[/color] таскает их сам, эта [color=#FA8C1C]ошибка[/color] была подмечена уже ранее.'
             DefaultImage:
                 source: 'source/gif/1/48.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/48.png')
             DefaultLabel:
                 text: 'База Новичка – Исследовательская'
                 halign: 'center'
@@ -387,8 +438,10 @@
                 text: 'Не удивляйтесь, что тут уже находится [color=#FA8C1C]зелёный пакет[/color], Про который подробнее говорится в “этап 2”, просто [color=#FA8C1C]Новичок[/color] шустро построил производство [color=#FA8C1C]красных и зелёных пакетов[/color], но только в этом его тут можно похвалить. Я уверен, что вам уже сразу стало интересно, что за [color=#FA8C1C]кольцевые конвейеры[/color] у него. Логика этого производства сначала не сильно понятна, но если присмотреться, то вроде всё становится ясно. Новичок просто крутит по кругу [color=#FA8C1C]железные и медные пластины[/color], а [color=#FA8C1C]фильтрующие манипуляторы[/color] принимают нужный им ресурс. Причина, почему это плохое производство схоже с проблемой на [color=#FA8C1C]плавильнях[/color], оно не интуитивно считаемо, и нельзя подсчитать сколько будет производится [color=#FA8C1C]зелёных пакетов[/color] в минуту, ведь тут уже много чего производится [color=#FA8C1C]шестерёнки и маниуляторы[/color], и конвейеры и.т.д, и в какой-то момент просто это всё может встать, ведь на [color=#FA8C1C]конвейерах[/color] останется либо [color=#FA8C1C]железные пластины, либо медные[/color], смотря, что быстрее тратится. Выгоднее просто сделать производство каждого предмета [color=#FA8C1C]отдельно[/color] и поставлять к производству [color=#FA8C1C]пакетов[/color] уже готовое!. И [color=#FA8C1C]забудьте[/color] про идею [color=#FA8C1C]кольцевых конвейеров[/color]. Надеемся вам такое в голову не приходило, как нашему [color=#FA8C1C]Новичку[/color].'
             DefaultImage:
                 source: 'source/gif/1/49.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/49.png')
             DefaultImage:
                 source: 'source/gif/1/50.png'
+                on_touch_down: root.go_to_picture('red', 'source/gif/1/50.png')
             DefaultLabel:
                 text: 'База Новичка - Добыча ресурсов'
                 halign: 'center'

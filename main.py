@@ -5,6 +5,8 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.app import App
 from kivy.uix.image import Image
 from kivy.uix.scatterlayout import ScatterLayout
+from kivy.core.window import  Window
+
 
 Builder.load_file('action.kv')
 

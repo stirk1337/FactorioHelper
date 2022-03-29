@@ -612,11 +612,21 @@ class Widget(WidgetBase):
 
         See :meth:`on_touch_down` for more information.
         '''
+       
+
+
+
         if self.disabled:
             return
+
+        #added
         for child in self.children[:]:
+            if not child.collide_point(touch.pos[0], touch.pos[1]):
+                continue
+
             if child.dispatch('on_touch_up', touch):
                 return True
+        #added
 
     def on_kv_post(self, base_widget):
         pass

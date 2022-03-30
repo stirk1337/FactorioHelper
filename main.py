@@ -5,13 +5,10 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.app import App
 from kivy.uix.image import Image
 from kivy.uix.scatterlayout import ScatterLayout
-from kivy.core.window import  Window
-
 
 Builder.load_file('action.kv')
 
 visited_screens = []
-
 
 class DefaultScreen(Screen):
     def add_screen(self, screen):
@@ -19,18 +16,27 @@ class DefaultScreen(Screen):
 
     def go_to_picture(self, screen, source):
         global pictureScreen
-        pictureScreen.clear_widgets()
-        pictureScreen.canvas.add(Color(.20, .20, .20, 1))
-        pictureScreen.canvas.add(Rectangle(pos = self.pos, size = self.size))
+        print("goto picture", visited_screens)
 
         sm.transition.direction = 'left'
         sm.current = 'picture'
-        visited_screens.append(screen)
+        self.add_screen(screen)
+
+
+        pictureScreen.clear_widgets()
+        pictureScreen.canvas.add(Color(.20, .20, .20, 1))
+        pictureScreen.canvas.add(Rectangle(pos=self.pos, size=self.size))
 
         scatter = ScatterLayout(do_rotation=False)
-        image = Image(source=source, allow_stretch = True, anim_delay = 0.1)
+        image = Image(source=source, allow_stretch=True, anim_delay=0.1)
         scatter.add_widget(image)
         pictureScreen.add_widget(scatter)
+
+        if 'menu' not in visited_screens:
+            visited_screens.insert(0, 'menu')
+
+
+
 
 
 class MenuScreen(DefaultScreen):
@@ -71,6 +77,7 @@ sm = ScreenManager()
 
 
 def hook_keyboard(window, key, *largs):
+    print("hook", visited_screens)
     if key == 27:
         if sm.current == 'menu':
             App.get_running_app().stop()

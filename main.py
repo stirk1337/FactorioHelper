@@ -5,8 +5,12 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.app import App
 from kivy.uix.image import Image
 from kivy.uix.scatterlayout import ScatterLayout
+from kivymd.uix.dialog import MDDialog
+from kivymd.uix.button import MDFlatButton
+from kivy.config import Config
 
 Builder.load_file('action.kv')
+Config.set('kivy', 'exit_on_escape', '0')
 
 visited_screens = []
 
@@ -16,8 +20,6 @@ class DefaultScreen(Screen):
 
     def go_to_picture(self, screen, source):
         global pictureScreen
-        print("goto picture", visited_screens)
-
         sm.transition.direction = 'left'
         sm.current = 'picture'
         self.add_screen(screen)
@@ -77,13 +79,33 @@ sm = ScreenManager()
 
 
 def hook_keyboard(window, key, *largs):
-    print("hook", visited_screens)
     if key == 27:
         if sm.current == 'menu':
-            App.get_running_app().stop()
-        sm.transition.direction = 'right'
-        sm.current = visited_screens.pop()
-        return True
+            if not App.dialog:
+                dial = MDDialog(
+                    title = '[size=30][font=source/font/DejaVuSans-BoldOblique.ttf]Выйти?[/font][/size]',
+                    text="[size=20][font=source/font/DejaVuSans.ttf]Вы действительно хотите выйти?[/font][/size]",
+                    size_hint_x = 0.9,
+                    radius=[20, 20, 20, 20],
+                    buttons=[
+                        MDFlatButton(
+                            text="[size=25][color=#FA8C1C][font=source/font/DejaVuSans.ttf]ДА[/font][/color][/size]",
+                            on_release = lambda x: quit(),
+                            font_name = 'source/font/DejaVuSans.ttf',
+                        ),
+                        MDFlatButton(
+                            text="[size=25][color=#FA8C1C][font=source/font/DejaVuSans.ttf]НЕТ[/font][/color][/size]",
+                            on_release = lambda x: App.dialog.dismiss(),
+                            font_name = 'source/font/DejaVuSans.ttf',
+                        ),
+                    ],
+                )
+                App.dialog = dial
+            App.dialog.open()
+        else:
+            sm.transition.direction = 'right'
+            sm.current = visited_screens.pop()
+            return True
 
 
 def post_build_init(ev):
@@ -92,6 +114,8 @@ def post_build_init(ev):
 
 
 class App(MDApp):
+    dialog = None
+
     def build(self):
         self.bind(on_start=post_build_init)
         sm.add_widget(MenuScreen(name='menu'))

@@ -27,7 +27,7 @@ class DefaultScreen(Screen):
 
         pictureScreen.clear_widgets()
         pictureScreen.canvas.add(Color(.20, .20, .20, 1))
-        pictureScreen.canvas.add(Rectangle(pos=self.pos, size=self.size))
+        pictureScreen.canvas.add(Rectangle(pos=self.pos, size=self.size, source='source/pictures/picture_background.png'))
 
         scatter = ScatterLayout(do_rotation=False)
         image = Image(source=source, allow_stretch=True, anim_delay=0.1)

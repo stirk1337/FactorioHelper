@@ -17,7 +17,7 @@
     adaptive_height: True
     size_hint_y: None
     padding: 15
-    spacing: 10
+    spacing: 30
 
 <DefaultImage@Image>:
     size_hint_y: None
@@ -43,6 +43,14 @@
     FitImage:
         source: "source/gif/0/0_start.jpg"
         radius: [20,]
+
+<PictureScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            Image:
+                source: "source/pictures/picture_background.png"
 
 <MenuScreen>:
     BoxLayout:
@@ -135,17 +143,22 @@
                 root.manager.transition.direction = 'left'
                 root.add_screen('menu')
 
-
-
-
 <StartScreen>:
     DefaultScrollView:
         DefaultBoxLayout:
+            DefaultLabel:
+                text: 'Добро пожаловать!'
+                halign: 'center'
             DefaultImage:
                 source: 'source/gif/0/0_start.jpg'
                 on_touch_up: root.go_to_picture('start', 'source/gif/0/0_start.jpg')
             DefaultLabel:
-                text: 'Добро пожаловать новичок или уже не новичок, этот гайд предназначен для всех. Он поможет тебе пройти все этапы игры от копания киркой железной руды, до запуска ракеты! Так же по пути игры после каждого этапа вам будет показываться прогресс нашего [color=#FA8C1C]Новичка[/color] и указывать на его ошибки, чтобы вы их не допустили. Но чтобы нам приступить к самому прохождению важно знать полезные фишки игры. Начнём! \n1. При нажатии на кнопку [color=#FA8C1C]alt[/color] включается/выключается Alt-режим. Он позволяет увидеть подробную информацию, что где хранится или увидеть, что производит та или иная машина'
+                text: 'Новичок или уже не новичок, этот гайд предназначен для всех. Он поможет тебе пройти все этапы игры от копания киркой железной руды, до запуска ракеты! Так же по пути игры после каждого этапа вам будет показываться прогресс нашего [color=#FA8C1C]Новичка[/color] и указывать на его ошибки, чтобы вы их не допустили. Но чтобы нам приступить к самому прохождению важно знать полезные фишки игры.'
+            DefaultLabel:
+                text:  'Начнём!'
+                halign: 'center'
+            DefaultLabel:
+                text: '1. При нажатии на кнопку [color=#FA8C1C]alt[/color] включается/выключается Alt-режим. Он позволяет увидеть подробную информацию, что где хранится или увидеть, что производит та или иная машина'
             DefaultImage:
                 source: 'source/gif/0/0_0.gif'
                 on_touch_up: root.go_to_picture('start', 'source/gif/0/0_0.gif')
@@ -203,8 +216,6 @@
                     root.manager.current = 'red'
                     root.manager.transition.direction = 'left'
                     root.add_screen('start')
-
-
 
 <RedScreen>:
     DefaultScrollView:
@@ -504,11 +515,6 @@
                     root.manager.current = 'green'
                     root.manager.transition.direction = 'left'
                     root.add_screen('red')
-
-
-
-
-
 
 <GreenScreen>:
     ScatterLayout:

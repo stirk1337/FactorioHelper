@@ -14,6 +14,7 @@ Config.set('kivy', 'exit_on_escape', '0')
 
 visited_screens = []
 
+
 class DefaultScreen(Screen):
     def add_screen(self, screen):
         visited_screens.append(screen)
@@ -24,10 +25,10 @@ class DefaultScreen(Screen):
         sm.current = 'picture'
         self.add_screen(screen)
 
-
         pictureScreen.clear_widgets()
         pictureScreen.canvas.add(Color(.20, .20, .20, 1))
-        pictureScreen.canvas.add(Rectangle(pos=self.pos, size=self.size, source='source/pictures/picture_background.png'))
+        pictureScreen.canvas.add(
+            Rectangle(pos=self.pos, size=self.size, source='source/pictures/picture_background.png'))
 
         scatter = ScatterLayout(do_rotation=False)
         image = Image(source=source, allow_stretch=True, anim_delay=0.1)
@@ -36,9 +37,6 @@ class DefaultScreen(Screen):
 
         if 'menu' not in visited_screens:
             visited_screens.insert(0, 'menu')
-
-
-
 
 
 class MenuScreen(DefaultScreen):
@@ -73,6 +71,13 @@ class PictureScreen(Screen):
     pass
 
 
+class PersonalScreen(DefaultScreen):
+    pass
+
+class TrainScreen(DefaultScreen):
+    pass
+
+
 pictureScreen = PictureScreen(name='picture')
 
 sm = ScreenManager()
@@ -83,20 +88,20 @@ def hook_keyboard(window, key, *largs):
         if sm.current == 'menu':
             if not App.dialog:
                 dial = MDDialog(
-                    title = '[size=30][font=source/font/DejaVuSans-BoldOblique.ttf]Выйти?[/font][/size]',
+                    title='[size=30][font=source/font/DejaVuSans-BoldOblique.ttf]Выйти?[/font][/size]',
                     text="[size=20][font=source/font/DejaVuSans.ttf]Вы действительно хотите выйти?[/font][/size]",
-                    size_hint_x = 0.9,
+                    size_hint_x=0.9,
                     radius=[20, 20, 20, 20],
                     buttons=[
                         MDFlatButton(
                             text="[size=25][color=#FA8C1C][font=source/font/DejaVuSans.ttf]ДА[/font][/color][/size]",
-                            on_release = lambda x: quit(),
-                            font_name = 'source/font/DejaVuSans.ttf',
+                            on_release=lambda x: quit(),
+                            font_name='source/font/DejaVuSans.ttf',
                         ),
                         MDFlatButton(
                             text="[size=25][color=#FA8C1C][font=source/font/DejaVuSans.ttf]НЕТ[/font][/color][/size]",
-                            on_release = lambda x: App.dialog.dismiss(),
-                            font_name = 'source/font/DejaVuSans.ttf',
+                            on_release=lambda x: App.dialog.dismiss(),
+                            font_name='source/font/DejaVuSans.ttf',
                         ),
                     ],
                 )
@@ -126,6 +131,8 @@ class App(MDApp):
         sm.add_widget(BlackScreen(name='black'))
         sm.add_widget(DefenceScreen(name='defence'))
         sm.add_widget(pictureScreen)
+        sm.add_widget((PersonalScreen(name='personal')))
+        sm.add_widget(TrainScreen(name='train'))
         return sm
 
 

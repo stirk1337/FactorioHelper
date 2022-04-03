@@ -47,7 +47,7 @@ requirements = python3, pillow, cmake, kivyMD, kivy
 #garden_requirements =
 
 # (str) Presplash of the application
-presplash.filename = source/pictures/back.jpg
+presplash.filename = source/pictures/loading.png
 
 # (str) Icon of the application
 icon.filename = source/pictures/icon.png

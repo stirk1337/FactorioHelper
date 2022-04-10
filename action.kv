@@ -29,6 +29,8 @@
     font_size: 40
     font_name: 'source/font/DejaVuSans-BoldOblique.ttf'
     markup: True
+    background_down: 'source/pictures/yellow.png'
+
 
 <ArticleButton@MenuButton>:
     size_hint: 1, None
@@ -247,7 +249,7 @@
                 height: 100
             ArticleButton:
                 text: '[color=#FA8C1C]I[/color] Красное пиво'
-                on_press:
+                on_release:
                     root.manager.current = 'red'
                     root.manager.transition.direction = 'left'
                     root.add_screen('start')
@@ -332,7 +334,7 @@
                 text: 'Следите за [color=#FA8C1C]загрязнением[/color], ведь в какой-то момент на вас могут напасть обитатели этой планеты. Если на вас уже [color=#FA8C1C]напали[/color], рекомендуем перейти к этапу “Защита базы”, нажав по кнопке ниже'
             ArticleButton:
                 text: 'Защита базы'
-                on_press:
+                on_release:
                     root.manager.current = 'defence'
                     root.manager.transition.direction = 'left'
                     root.add_screen('red')
@@ -430,7 +432,7 @@
                 text: 'Это [color=#FA8C1C]технологии[/color], которые вы можете сделать прямо сейчас без каких-либо проблем, но нам не нужны они все. Некоторые нам пока не важны, либо вообще бесполезны.\n\nВажные нам [color=#FA8C1C]технологии[/color]: Пулемётная турель, Каменная стена, Военная промышленность, Электроника, Быстрый манипулятор, Производство стали, Тяжёлая броня,  Логистический исследовательский пакет.\n\n[color=#FA8C1C]Не совсем важные[/color]: Оптика, Скорострельность оружия 1, Огнестрельный урон 1.\n\n[color=#FA8C1C]Бесполезные[/color]: Стальной инструмент.\n\nПока исследуется расскажем, что делает каждая [color=#FA8C1C]технология[/color].\n\n1) [color=#FA8C1C]Пулумётная турель[/color]. Открывает [color=#FA8C1C]турель[/color], которая будет сражаться за вас и защищать вашу базу от [color=#FA8C1C]монстров[/color]. Для неё подойдут любые [color=#FA8C1C]патроны[/color]. Зелёная зона, это дальность стрельбы [color=#FA8C1C]турели[/color]. Подробнее про защиту говорится в этапе “Защита базы” . Если на вас уже напали, рекомендуем перейти к этапу "Защита базы"'
             ArticleButton:
                 text: 'Защита базы'
-                on_press:
+                on_release:
                     root.manager.current = 'defence'
                     root.manager.transition.direction = 'left'
                     root.add_screen('red')
@@ -546,7 +548,7 @@
                 text: 'Вы прошли [color=#FA8C1C]первый этап[/color] нашего гайда, но ваше путешествие только начинается и если вас затянула игра, как и нас, то теперь вы можете приступать ко второму этапу.'
             ArticleButton:
                 text: '[color=#FA8C1C]II[/color] Зелёное пиво'
-                on_press:
+                on_release:
                     root.manager.current = 'green'
                     root.manager.transition.direction = 'left'
                     root.add_screen('red')
@@ -704,7 +706,7 @@
                 text: '19) [color=#FA8C1C]Пакетный манипулятор.[/color] Открывает [color=#FA8C1C]Пакетный манипулятор, Пакетный фильтрующий манипулятор и Бонус вместимости пакетного манипулятора.[/color] \n[color=#FA8C1C]Пакетный манипулятор,[/color] что и [color=#FA8C1C]быстрый манипулятор,[/color] но он хватает сразу несколько предметов, на данный момент он хватает [color=#FA8C1C]на 1 больше.[/color]\n[color=#FA8C1C]Пакетный фильтрующий манипулятор,[/color] что и [color=#FA8C1C]Пакетный манипулятор,[/color] но умеющий фильтровать.\n[color=#FA8C1C]Бонус вместимости пакетного манипулятора.[/color] Бонус вместимости Пакетного манипулятора [color=#FA8C1C]+1.[/color]\n20) [color=#FA8C1C]Аккумулятор.[/color] Открывает [color=#FA8C1C]Аккумулятор,[/color] который является новым [color=#FA8C1C]рецептом[/color] в [color=#FA8C1C]химическом заводе.[/color]\n21) [color=#FA8C1C]Стационарные аккумуляторы.[/color] Открывает [color=#FA8C1C]Аккумуляторный блок,[/color] который хранит излишки [color=#FA8C1C]электроэнергии.[/color]\n22) [color=#FA8C1C]Скорость лаборатории 2.[/color] Бонус скорости [color=#FA8C1C]исследований[/color] в [color=#FA8C1C]лабораториях +30%.[/color]\n23) [color=#FA8C1C]Бонус вместимости манипулятора 1.[/color] Бонус вместимости пакетного манипулятора +1.\n24) [color=#FA8C1C]Бонус вместимости манипулятора 2.[/color] [color=#FA8C1C]Бонус вместимости всех манипуляторов +1.[/color]\n25) [color=#FA8C1C]Солнечная энергия[/color] (не забудьте изучить [color=#FA8C1C]Оптику[/color]). Открывает [color=#FA8C1C]Солнечную панель,[/color] которая является [color=#FA8C1C]бесплатным источником энергии,[/color] но [color=#FA8C1C]бесполезна ночью.[/color] Про неё будет рассказана подробнее в [color=#FA8C1C]следующем этапе.[/color]\n26) [color=#FA8C1C]Продуктивность добычи 1.[/color] [color=#FA8C1C]Продуктивность добычи буров[/color] и [color=#FA8C1C]нефтяных вышек увеличено на 10%.[/color]\nТехнологии по желанию.\n1) [color=#FA8C1C]Военный исследовательский пакет.[/color] Открывает [color=#FA8C1C]Чёрный пакет,[/color] про который рассказывается в дополнительной главе [color=#FA8C1C]“Чёрный пакет”[/color].'
             ArticleButton:
                 text: 'Чёрный пакет'
-                on_press:
+                on_release:
                     root.manager.current = 'black'
                     root.manager.transition.direction = 'left'
                     root.add_screen('green')
@@ -717,7 +719,7 @@
                 text: '3) Про технологии: [color=#FA8C1C]Портативная солнечная панель, Личный аккумулятор, Оборудование для игнорирования конвейеров, Прибор ночного видения,[/color] будет рассказано в дополнительной главе [color=#FA8C1C]“Персональное оборудование”[/color]'
             ArticleButton:
                 text: 'Персональное оборудование'
-                on_press:
+                on_release:
                     root.manager.current = 'personal'
                     root.manager.transition.direction = 'left'
                     root.add_screen('green')
@@ -725,7 +727,7 @@
                 text: '4) [color=#FA8C1C]Модуль эффективности.[/color] Открывает [color=#FA8C1C]Модуль эффективности,[/color] который понижает [color=#FA8C1C]энергопотребление машины.[/color]\n5) [color=#FA8C1C]Горючие жидкости.[/color] Открывает новую ветку [color=#FA8C1C]технологий,[/color] которые понадобятся нам в будущем, но не на данный момент. \n6) Про технологии: [color=#FA8C1C]Железные дороги, Автоматизация железных дорог, Железнодорожные сигналы, Вагон-цистерна,[/color] будет рассказано в дополнительной главе [color=#FA8C1C]“Железные дороги”[/color]'
             ArticleButton:
                 text: 'Железные дороги'
-                on_press:
+                on_release:
                     root.manager.current = 'train'
                     root.manager.transition.direction = 'left'
                     root.add_screen('green')
@@ -804,7 +806,7 @@
                 text: 'Вы прошли второй этап нашего гайда, теперь вы умеете [color=#FA8C1C]планировать производство заранее[/color] и отстраивать уже целые [color=#FA8C1C]заводы![/color]. Но это даже ещё не середина того, что вам предстоить пройти. Также не забывайте про дополнительные главы в них есть очень много полезной информации, которая вам может пригодиться. А теперь пора переходить к третьему этапу.'
             ArticleButton:
                 text: '[color=#FA8C1C]III[/color] Синее пиво'
-                on_press:
+                on_release:
                     root.manager.current = 'blue'
                     root.manager.transition.direction = 'left'
                     root.add_screen('green')

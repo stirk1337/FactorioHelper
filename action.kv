@@ -42,9 +42,6 @@
 
 <MySwiper@MDSwiperItem>:
     orientation: 'vertical'
-    FitImage:
-        source: "source/gif/0/0_start.jpg"
-        radius: [20,]
 
 <PictureScreen>:
     canvas.before:
@@ -74,13 +71,20 @@
                     root.manager.current = 'start'
                     root.manager.transition.direction = 'left'
                     root.add_screen('menu')
+                FitImage:
+                    source: "source/pictures/start.jpg"
+                    radius: [20,]
                 DefaultLabel:
                     text: 'Введение'
+                    halign: 'center'
             MySwiper:
                 on_touch_up:
                     root.manager.current = 'red'
                     root.manager.transition.direction = 'left'
                     root.add_screen('menu')
+                FitImage:
+                    source: "source/pictures/red.jpg"
+                    radius: [20,]
                 DefaultLabel:
                     text: 'Красное пиво'
             MySwiper:

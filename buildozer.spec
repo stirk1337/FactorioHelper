@@ -4,7 +4,7 @@
 title = Factorio Helper
 
 # (str) Package name
-package.name = Factorio Helper
+package.name = FactorioHelper
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test

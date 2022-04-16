@@ -58,13 +58,13 @@
                 rgb: .20,.20,.20
             Rectangle:
                 size: self.size
-        padding: 10
+        padding: 15
         spacing: 50
         orientation: "vertical"
-
         DefaultLabel:
             text: 'Основные главы'
             halign: 'center'
+            font_size: 80
         MDSwiper:
             MySwiper:
                 on_touch_up:
@@ -72,11 +72,12 @@
                     root.manager.transition.direction = 'left'
                     root.add_screen('menu')
                 FitImage:
-                    source: "source/pictures/start.jpg"
+                    source: "source/pictures/start.png"
                     radius: [20,]
                 DefaultLabel:
-                    text: 'Введение'
+                    text: '[color=#FA8C1C]0[/color] Введение'
                     halign: 'center'
+                    font_size: 60
             MySwiper:
                 on_touch_up:
                     root.manager.current = 'red'
@@ -86,8 +87,9 @@
                     source: "source/pictures/red.png"
                     radius: [20,]
                 DefaultLabel:
-                    text: 'Красное пиво'
+                    text: '[color=#FA8C1C]I[/color] Автоматизация'
                     halign: 'center'
+                    font_size: 60
             MySwiper:
                 on_touch_up:
                     root.manager.current = 'green'
@@ -97,8 +99,9 @@
                     source: "source/pictures/green.png"
                     radius: [20,]
                 DefaultLabel:
-                    text: 'Зелёное пиво'
+                    text: '[color=#FA8C1C]II[/color] Логистика'
                     halign: 'center'
+                    font_size: 60
             MySwiper:
                 on_touch_up:
                     root.manager.current = 'blue'
@@ -108,11 +111,51 @@
                     source: "source/pictures/blue.png"
                     radius: [20,]
                 DefaultLabel:
-                    text: 'Синее пиво'
+                    text: '[color=#FA8C1C]III[/color] Химия'
                     halign: 'center'
+                    font_size: 60
+            MySwiper:
+                on_touch_up:
+                    root.manager.current = 'purple'
+                    root.manager.transition.direction = 'left'
+                    root.add_screen('menu')
+                FitImage:
+                    source: "source/pictures/purple.png"
+                    radius: [20,]
+                DefaultLabel:
+                    text: '[color=#FA8C1C]IV[/color] Производство'
+                    halign: 'center'
+                    font_size: 60
+            MySwiper:
+                on_touch_up:
+                    root.manager.current = 'yellow'
+                    root.manager.transition.direction = 'left'
+                    root.add_screen('menu')
+                FitImage:
+                    source: "source/pictures/yellow_pivo.png"
+                    radius: [20,]
+                DefaultLabel:
+                    text: '[color=#FA8C1C]V[/color] Контроль'
+                    halign: 'center'
+                    font_size: 60
+            MySwiper:
+                on_touch_up:
+                    root.manager.current = 'white'
+                    root.manager.transition.direction = 'left'
+                    root.add_screen('menu')
+                FitImage:
+                    source: "source/pictures/white.png"
+                    radius: [20,]
+                DefaultLabel:
+                    text: '[color=#FA8C1C]VI[/color] Космос'
+                    halign: 'center'
+                    font_size: 60
+
+
         DefaultLabel:
             text: 'Доп. главы'
             halign: 'center'
+            font_size: 80
         MDSwiper:
             MySwiper:
                 on_touch_up:
@@ -121,13 +164,18 @@
                     root.add_screen('menu')
                 DefaultLabel:
                     text: 'Защита базы'
+                    font_size: 60
             MySwiper:
                 on_touch_up:
                     root.manager.current = 'black'
                     root.manager.transition.direction = 'left'
                     root.add_screen('menu')
+                FitImage:
+                    source: "source/pictures/black.png"
+                    radius: [20,]
                 DefaultLabel:
                     text: 'Чёрный пакет'
+                    font_size: 60
             MySwiper:
                 on_touch_up:
                     root.manager.current = 'personal'
@@ -135,6 +183,7 @@
                     root.add_screen('menu')
                 DefaultLabel:
                     text: 'Персональное оборудование'
+                    font_size: 60
             MySwiper:
                 on_touch_up:
                     root.manager.current = 'train'
@@ -142,56 +191,7 @@
                     root.add_screen('menu')
                 DefaultLabel:
                     text: 'Железные дороги'
-
-<MenuScreenLast>:
-    BoxLayout:
-        canvas:
-            Color:
-                rgb: .20,.20,.20
-            Rectangle:
-                size: self.size
-        padding: 50
-        spacing: 50
-        orientation: "vertical"
-        MenuButton:
-            text: '[color=#FA8C1C]0[/color] Введение'
-            on_press:
-                root.manager.current = 'start'
-                root.manager.transition.direction = 'left'
-                root.add_screen('menu')
-        MenuButton:
-            text: '[color=#FA8C1C]I[/color] Красное пиво'
-            on_release:
-                root.manager.current = 'red'
-                root.manager.transition.direction = 'left'
-                root.add_screen('menu')
-        MenuButton:
-            text: '[color=#FA8C1C]II[/color] Зелёное пиво'
-            on_release:
-                root.manager.current = 'green'
-                root.manager.transition.direction = 'left'
-                root.add_screen('menu')
-        MenuButton:
-            text: '[color=#FA8C1C]III[/color] Синее пиво'
-            on_release:
-                root.manager.current = 'blue'
-                root.manager.transition.direction = 'left'
-                root.add_screen('menu')
-        MenuButton:
-            text: '[color=#FA8C1C]IV[/color] Чёрное пиво'
-            on_release:
-                root.manager.current = 'black'
-                root.manager.transition.direction = 'left'
-                root.add_screen('menu')
-        DefaultLabel:
-            text: 'Доп. главы'
-            halign: 'center'
-        MenuButton:
-            text: 'Защита базы'
-            on_release:
-                root.manager.current = 'defence'
-                root.manager.transition.direction = 'left'
-                root.add_screen('menu')
+                    font_size: 60
 
 <StartScreen>:
     DefaultScrollView:

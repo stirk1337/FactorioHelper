@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = FactorioHelper
+title = Factorio Helper
 
 # (str) Package name
-package.name = FactorioHelper
+package.name = Factorio Helper
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test

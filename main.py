@@ -58,6 +58,14 @@ class GreenScreen(DefaultScreen):
 class BlueScreen(DefaultScreen):
     pass
 
+class PurpleScreen(DefaultScreen):
+    pass
+
+class YellowScreen(DefaultScreen):
+    pass
+
+class WhiteScreen(DefaultScreen):
+    pass
 
 class BlackScreen(DefaultScreen):
     pass
@@ -128,6 +136,9 @@ class App(MDApp):
         sm.add_widget(RedScreen(name='red'))
         sm.add_widget(GreenScreen(name='green'))
         sm.add_widget(BlueScreen(name='blue'))
+        sm.add_widget(PurpleScreen(name='purple'))
+        sm.add_widget(YellowScreen(name='yellow'))
+        sm.add_widget(WhiteScreen(name='white'))
         sm.add_widget(BlackScreen(name='black'))
         sm.add_widget(DefenceScreen(name='defence'))
         sm.add_widget(pictureScreen)

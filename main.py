@@ -88,18 +88,18 @@ def hook_keyboard(window, key, *largs):
         if sm.current == 'menu':
             if not App.dialog:
                 dial = MDDialog(
-                    title='[size=30][font=source/font/DejaVuSans-BoldOblique.ttf]Выйти?[/font][/size]',
-                    text="[size=20][font=source/font/DejaVuSans.ttf]Вы действительно хотите выйти?[/font][/size]",
+                    title='[size=70][font=source/font/DejaVuSans-BoldOblique.ttf]Выйти?[/font][/size]',
+                    text="[size=50][font=source/font/DejaVuSans.ttf]Вы действительно хотите выйти?[/font][/size]",
                     size_hint_x=0.9,
                     radius=[20, 20, 20, 20],
                     buttons=[
                         MDFlatButton(
-                            text="[size=25][color=#FA8C1C][font=source/font/DejaVuSans.ttf]ДА[/font][/color][/size]",
+                            text="[size=50][color=#FA8C1C][font=source/font/DejaVuSans.ttf]ДА[/font][/color][/size]",
                             on_release=lambda x: quit(),
                             font_name='source/font/DejaVuSans.ttf',
                         ),
                         MDFlatButton(
-                            text="[size=25][color=#FA8C1C][font=source/font/DejaVuSans.ttf]НЕТ[/font][/color][/size]",
+                            text="[size=50][color=#FA8C1C][font=source/font/DejaVuSans.ttf]НЕТ[/font][/color][/size]",
                             on_release=lambda x: App.dialog.dismiss(),
                             font_name='source/font/DejaVuSans.ttf',
                         ),

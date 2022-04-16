@@ -83,24 +83,33 @@
                     root.manager.transition.direction = 'left'
                     root.add_screen('menu')
                 FitImage:
-                    source: "source/pictures/red.jpg"
+                    source: "source/pictures/red.png"
                     radius: [20,]
                 DefaultLabel:
                     text: 'Красное пиво'
+                    halign: 'center'
             MySwiper:
                 on_touch_up:
                     root.manager.current = 'green'
                     root.manager.transition.direction = 'left'
                     root.add_screen('menu')
+                FitImage:
+                    source: "source/pictures/green.png"
+                    radius: [20,]
                 DefaultLabel:
                     text: 'Зелёное пиво'
+                    halign: 'center'
             MySwiper:
                 on_touch_up:
                     root.manager.current = 'blue'
                     root.manager.transition.direction = 'left'
                     root.add_screen('menu')
+                FitImage:
+                    source: "source/pictures/blue.png"
+                    radius: [20,]
                 DefaultLabel:
                     text: 'Синее пиво'
+                    halign: 'center'
         DefaultLabel:
             text: 'Доп. главы'
             halign: 'center'
@@ -665,7 +674,7 @@
                 source: 'source/gif/2/21.png'
                 on_touch_up: root.go_to_picture('green', 'source/gif/2/21.png')
             DefaultLabel:
-                text: 'На каждый розовый квадратик можно поставить [color=#FA8C1C]Нефтяную вышку[/color] и она будет выкачивать [color=#FA8C1C]Сырую нефть,[/color] только вам ещё надо будет придумать, как доставлять до завода. Отличие [color=#FA8C1C]Сырой нефти[/color] от [color=#FA8C1C]руд[/color], что она [color=#FA8C1C]хранится[/color] не количеством, а процентами, то есть она не может кончится, просто потом [color=#FA8C1C]нефтяная вышка[/color] перестанет что либо выкачивать, когда [color=#FA8C1C]процент[/color] станет равным [color=#FA8C1C]0.[/color]\n[color=#FA8C1C]Нефтеперерабатывающий завод.[/colo] Работает почти так же, как и [color=#FA8C1C]сборщик,[/color] но с другими [color=#FA8C1C]рецептами.[/color]\n[color=#FA8C1C]Химический завод.[/color] Работает почти так же, как и [color=#FA8C1C]сборщик,[/color] но с другими [color=#FA8C1C]рецептами.[/color]\n[color=#FA8C1C]Базовая переработка нефти.[/color] Новый рецепт в [color=#FA8C1C]Нефтеперерабатывающем заводе.[/color] Принимает [color=#FA8C1C]Сырую нефть,[/color] отдаёт [color=#FA8C1C]Попутный нефтяной газ.[/color] Чтобы транспортировать [color=#FA8C1C]газ,[/color] используются такие же [color=#FA8C1C]трубы,[/color] что и с транспортировкой [color=#FA8C1C]жидкостей.[/color]'
+                text: 'На каждый розовый квадратик можно поставить [color=#FA8C1C]Нефтяную вышку[/color] и она будет выкачивать [color=#FA8C1C]Сырую нефть,[/color] только вам ещё надо будет придумать, как доставлять до завода. Отличие [color=#FA8C1C]Сырой нефти[/color] от [color=#FA8C1C]руд[/color], что она [color=#FA8C1C]хранится[/color] не количеством, а процентами, то есть она не может кончится, просто потом [color=#FA8C1C]нефтяная вышка[/color] перестанет что либо выкачивать, когда [color=#FA8C1C]процент[/color] станет равным [color=#FA8C1C]0.[/color]\n[color=#FA8C1C]Нефтеперерабатывающий завод.[/color] Работает почти так же, как и [color=#FA8C1C]сборщик,[/color] но с другими [color=#FA8C1C]рецептами.[/color]\n[color=#FA8C1C]Химический завод.[/color] Работает почти так же, как и [color=#FA8C1C]сборщик,[/color] но с другими [color=#FA8C1C]рецептами.[/color]\n[color=#FA8C1C]Базовая переработка нефти.[/color] Новый рецепт в [color=#FA8C1C]Нефтеперерабатывающем заводе.[/color] Принимает [color=#FA8C1C]Сырую нефть,[/color] отдаёт [color=#FA8C1C]Попутный нефтяной газ.[/color] Чтобы транспортировать [color=#FA8C1C]газ,[/color] используются такие же [color=#FA8C1C]трубы,[/color] что и с транспортировкой [color=#FA8C1C]жидкостей.[/color]'
             DefaultImage:
                 source: 'source/gif/2/22.png'
                 on_touch_up: root.go_to_picture('green', 'source/gif/2/22.png')
@@ -868,15 +877,19 @@
             DefaultImage:
                 source: 'source/gif/3/8.png'
                 on_touch_up: root.go_to_picture('blue', 'source/gif/3/8.png')
+                height: 100
             DefaultImage:
                 source: 'source/gif/3/9.png'
                 on_touch_up: root.go_to_picture('blue', 'source/gif/3/9.png')
+                height: 100
             DefaultImage:
                 source: 'source/gif/3/10.png'
                 on_touch_up: root.go_to_picture('blue', 'source/gif/3/10.png')
+                height: 100
             DefaultImage:
                 source: 'source/gif/3/11.png'
                 on_touch_up: root.go_to_picture('blue', 'source/gif/3/11.png')
+                height: 100
             DefaultLabel:
                 text: 'Важные нам технологии: Продвинутая переработка нефти, Смазочная жидкость, Электродвигатель, Робототехника, Строительная робототехника, Персональная дронстанция, Скорость рабочего дрона 1, Скорость рабочего дрона 2, Электроснабжение 2, Продвинутая металлургия 2, Производственный исследовательский пакет, Грузоподъёмность рабочего дрона 1, Логистическая робототехника, Скорость лабораторий 3, Бонус вместимости манипулятора 3, Продвинутая электроника 2, Оборудования экзоскелета, Модуль скорости 2, Модуль продуктивности 2, Силовая броня, Конструкция малой плотности, Вспомогательный исследовательский пакет, Личный аккумулятор МК2, Скорость лаборатории 4, Продуктивность добычи 2. \nНе совсем важные: Модуль эффективности 2, Лазерные технологии, Сила торможения 1, Переработка урана, Ракетное топливо, Ядерная энергия.\nПока исследуется расскажем, что делает каждая технология.\n1) Продвинутая переработка нефти. Открывает Продвинутую переработку нефти рецепт в нефтеперерабатывающем заводе. Переработку мазута в дизельное топливо и Переработку дизельного топлива в попутный нефтяной газ, Твёрдое топливо рецепты в химическом заводе.\n2) Смазочная жидкость. Открывает Смазочную жидкость рецепт в химическом заводе.\n3) Электродвигатель. Открывает новый рецепт в сборщике - Электродвигатель.\n4) Робототехника. Открывает новый рецепт Каркас дрона.\n5) Строительная робототехника. Открывает Дронстанцию, Сундук пассивного снабжения, Сундук хранения и Строительного дрона. Дронастанция соединяется с другими дронстанциями для создания логистических сетей, используемых строительными и транспортными дронами. Соединяются они на расстоянии оранжевой области, если жёлтую линию будет пересекать зелёная область, то дронстанции не соединятся. '
             DefaultImage:

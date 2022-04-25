@@ -140,14 +140,14 @@
                     font_size: 45
             MySwiper:
                 on_touch_up:
-                    root.manager.current = 'white'
+                    root.manager.current = 'final'
                     root.manager.transition.direction = 'left'
                     root.add_screen('menu')
                 FitImage:
-                    source: "source/pictures/white.png"
+                    source: "source/pictures/final.png"
                     radius: [20,]
                 DefaultLabel:
-                    text: '[color=#FA8C1C]VI[/color] Космос'
+                    text: '[color=#FA8C1C]VI[/color] Финал'
                     halign: 'center'
                     font_size: 45
 
@@ -162,9 +162,13 @@
                     root.manager.current = 'defence'
                     root.manager.transition.direction = 'left'
                     root.add_screen('menu')
+                FitImage:
+                    source: "source/pictures/defence.png"
+                    radius: [20,]
                 DefaultLabel:
                     text: 'Защита базы'
                     font_size: 45
+                    halign: 'center'
             MySwiper:
                 on_touch_up:
                     root.manager.current = 'black'
@@ -174,24 +178,57 @@
                     source: "source/pictures/black.png"
                     radius: [20,]
                 DefaultLabel:
-                    text: 'Чёрный пакет'
+                    text: 'Военные технологии'
                     font_size: 45
+                    halign: 'center'
             MySwiper:
                 on_touch_up:
                     root.manager.current = 'personal'
                     root.manager.transition.direction = 'left'
                     root.add_screen('menu')
+                FitImage:
+                    source: "source/pictures/personal.png"
+                    radius: [20,]
                 DefaultLabel:
                     text: 'Персональное оборудование'
                     font_size: 45
+                    halign: 'center'
             MySwiper:
                 on_touch_up:
                     root.manager.current = 'train'
                     root.manager.transition.direction = 'left'
                     root.add_screen('menu')
+                FitImage:
+                    source: "source/pictures/train.png"
+                    radius: [20,]
                 DefaultLabel:
                     text: 'Железные дороги'
                     font_size: 45
+                    halign: 'center'
+            MySwiper:
+                on_touch_up:
+                    root.manager.current = 'uran'
+                    root.manager.transition.direction = 'left'
+                    root.add_screen('menu')
+                FitImage:
+                    source: "source/pictures/uran.png"
+                    radius: [20,]
+                DefaultLabel:
+                    text: 'Урановые технологии'
+                    font_size: 45
+                    halign: 'center'
+            MySwiper:
+                on_touch_up:
+                    root.manager.current = 'white'
+                    root.manager.transition.direction = 'left'
+                    root.add_screen('menu')
+                FitImage:
+                    source: "source/pictures/high.png"
+                    radius: [20,]
+                DefaultLabel:
+                    text: 'Высокие технологии'
+                    font_size: 45
+                    halign: 'center'
 
 <StartScreen>:
     DefaultScrollView:
@@ -261,7 +298,7 @@
                 on_touch_up: root.go_to_picture('start', 'source/gif/0/0_9.gif')
                 height: 100
             ArticleButton:
-                text: '[color=#FA8C1C]I[/color] Красное пиво'
+                text: '[color=#FA8C1C]I[/color] Автоматизация'
                 on_release:
                     root.manager.current = 'red'
                     root.manager.transition.direction = 'left'
@@ -560,7 +597,7 @@
             DefaultLabel:
                 text: 'Вы прошли [color=#FA8C1C]первый этап[/color] нашего гайда, но ваше путешествие только начинается и если вас затянула игра, как и нас, то теперь вы можете приступать ко второму этапу.'
             ArticleButton:
-                text: '[color=#FA8C1C]II[/color] Зелёное пиво'
+                text: '[color=#FA8C1C]II[/color] Логистика'
                 on_release:
                     root.manager.current = 'green'
                     root.manager.transition.direction = 'left'
@@ -716,9 +753,9 @@
                 source: 'source/gif/2/29.png'
                 on_touch_up: root.go_to_picture('green', 'source/gif/2/29.png')
             DefaultLabel:
-                text: '19) [color=#FA8C1C]Пакетный манипулятор.[/color] Открывает [color=#FA8C1C]Пакетный манипулятор, Пакетный фильтрующий манипулятор и Бонус вместимости пакетного манипулятора.[/color] \n[color=#FA8C1C]Пакетный манипулятор,[/color] что и [color=#FA8C1C]быстрый манипулятор,[/color] но он хватает сразу несколько предметов, на данный момент он хватает [color=#FA8C1C]на 1 больше.[/color]\n[color=#FA8C1C]Пакетный фильтрующий манипулятор,[/color] что и [color=#FA8C1C]Пакетный манипулятор,[/color] но умеющий фильтровать.\n[color=#FA8C1C]Бонус вместимости пакетного манипулятора.[/color] Бонус вместимости Пакетного манипулятора [color=#FA8C1C]+1.[/color]\n20) [color=#FA8C1C]Аккумулятор.[/color] Открывает [color=#FA8C1C]Аккумулятор,[/color] который является новым [color=#FA8C1C]рецептом[/color] в [color=#FA8C1C]химическом заводе.[/color]\n21) [color=#FA8C1C]Стационарные аккумуляторы.[/color] Открывает [color=#FA8C1C]Аккумуляторный блок,[/color] который хранит излишки [color=#FA8C1C]электроэнергии.[/color]\n22) [color=#FA8C1C]Скорость лаборатории 2.[/color] Бонус скорости [color=#FA8C1C]исследований[/color] в [color=#FA8C1C]лабораториях +30%.[/color]\n23) [color=#FA8C1C]Бонус вместимости манипулятора 1.[/color] Бонус вместимости пакетного манипулятора +1.\n24) [color=#FA8C1C]Бонус вместимости манипулятора 2.[/color] [color=#FA8C1C]Бонус вместимости всех манипуляторов +1.[/color]\n25) [color=#FA8C1C]Солнечная энергия[/color] (не забудьте изучить [color=#FA8C1C]Оптику[/color]). Открывает [color=#FA8C1C]Солнечную панель,[/color] которая является [color=#FA8C1C]бесплатным источником энергии,[/color] но [color=#FA8C1C]бесполезна ночью.[/color] Про неё будет рассказана подробнее в [color=#FA8C1C]следующем этапе.[/color]\n26) [color=#FA8C1C]Продуктивность добычи 1.[/color] [color=#FA8C1C]Продуктивность добычи буров[/color] и [color=#FA8C1C]нефтяных вышек увеличено на 10%.[/color]\nТехнологии по желанию.\n1) [color=#FA8C1C]Военный исследовательский пакет.[/color] Открывает [color=#FA8C1C]Чёрный пакет,[/color] про который рассказывается в дополнительной главе [color=#FA8C1C]“Чёрный пакет”[/color].'
+                text: '19) [color=#FA8C1C]Пакетный манипулятор.[/color] Открывает [color=#FA8C1C]Пакетный манипулятор, Пакетный фильтрующий манипулятор и Бонус вместимости пакетного манипулятора.[/color] \n[color=#FA8C1C]Пакетный манипулятор,[/color] что и [color=#FA8C1C]быстрый манипулятор,[/color] но он хватает сразу несколько предметов, на данный момент он хватает [color=#FA8C1C]на 1 больше.[/color]\n[color=#FA8C1C]Пакетный фильтрующий манипулятор,[/color] что и [color=#FA8C1C]Пакетный манипулятор,[/color] но умеющий фильтровать.\n[color=#FA8C1C]Бонус вместимости пакетного манипулятора.[/color] Бонус вместимости Пакетного манипулятора [color=#FA8C1C]+1.[/color]\n20) [color=#FA8C1C]Аккумулятор.[/color] Открывает [color=#FA8C1C]Аккумулятор,[/color] который является новым [color=#FA8C1C]рецептом[/color] в [color=#FA8C1C]химическом заводе.[/color]\n21) [color=#FA8C1C]Стационарные аккумуляторы.[/color] Открывает [color=#FA8C1C]Аккумуляторный блок,[/color] который хранит излишки [color=#FA8C1C]электроэнергии.[/color]\n22) [color=#FA8C1C]Скорость лаборатории 2.[/color] Бонус скорости [color=#FA8C1C]исследований[/color] в [color=#FA8C1C]лабораториях +30%.[/color]\n23) [color=#FA8C1C]Бонус вместимости манипулятора 1.[/color] Бонус вместимости пакетного манипулятора +1.\n24) [color=#FA8C1C]Бонус вместимости манипулятора 2.[/color] [color=#FA8C1C]Бонус вместимости всех манипуляторов +1.[/color]\n25) [color=#FA8C1C]Солнечная энергия[/color] (не забудьте изучить [color=#FA8C1C]Оптику[/color]). Открывает [color=#FA8C1C]Солнечную панель,[/color] которая является [color=#FA8C1C]бесплатным источником энергии,[/color] но [color=#FA8C1C]бесполезна ночью.[/color] Про неё будет рассказана подробнее в [color=#FA8C1C]следующем этапе.[/color]\n26) [color=#FA8C1C]Продуктивность добычи 1.[/color] [color=#FA8C1C]Продуктивность добычи буров[/color] и [color=#FA8C1C]нефтяных вышек увеличено на 10%.[/color]\nТехнологии по желанию.\n1) [color=#FA8C1C]Военный исследовательский пакет.[/color] Открывает [color=#FA8C1C]Чёрный пакет,[/color] про который рассказывается в дополнительной главе [color=#FA8C1C]“Военные технологии”[/color].'
             ArticleButton:
-                text: 'Чёрный пакет'
+                text: 'Военные технологии'
                 on_release:
                     root.manager.current = 'black'
                     root.manager.transition.direction = 'left'
@@ -818,7 +855,7 @@
             DefaultLabel:
                 text: 'Вы прошли второй этап нашего гайда, теперь вы умеете [color=#FA8C1C]планировать производство заранее[/color] и отстраивать уже целые [color=#FA8C1C]заводы![/color]. Но это даже ещё не середина того, что вам предстоить пройти. Также не забывайте про дополнительные главы в них есть очень много полезной информации, которая вам может пригодиться. А теперь пора переходить к третьему этапу.'
             ArticleButton:
-                text: '[color=#FA8C1C]III[/color] Синее пиво'
+                text: '[color=#FA8C1C]III[/color] Химия'
                 on_release:
                     root.manager.current = 'blue'
                     root.manager.transition.direction = 'left'
@@ -1025,9 +1062,9 @@
                 text: 'Технологии по желанию.'
                 halign: 'center'
             DefaultLabel:
-                text: '1) [color=#FA8C1C]Модуль эффективности 2.[/color] Открывает [color=#FA8C1C]рецепт Модуль эффективности 2.[/color]\n2) [color=#FA8C1C]Лазерные технологии.[/color] Открывает новую ветку [color=#FA8C1C]технологий.[/color] Если у вас уже начали спавниться [color=#FA8C1C]Синего цвета монстры,[/color] то рекомендуем перейти к дополнительной главе [color=#FA8C1C]“Чёрный пакет”,[/color] чтобы [color=#FA8C1C]защитить[/color] свою [color=#FA8C1C]базу[/color] с помощью [color=#FA8C1C]лазерных турелей.[/color]'
+                text: '1) [color=#FA8C1C]Модуль эффективности 2.[/color] Открывает [color=#FA8C1C]рецепт Модуль эффективности 2.[/color]\n2) [color=#FA8C1C]Лазерные технологии.[/color] Открывает новую ветку [color=#FA8C1C]технологий.[/color] Если у вас уже начали спавниться [color=#FA8C1C]Синего цвета монстры,[/color] то рекомендуем перейти к дополнительной главе [color=#FA8C1C]“Военные технологии”,[/color] чтобы [color=#FA8C1C]защитить[/color] свою [color=#FA8C1C]базу[/color] с помощью [color=#FA8C1C]лазерных турелей.[/color]'
             ArticleButton:
-                text: ' Чёрный пакет'
+                text: 'Военные технологии'
                 on_release:
                     root.manager.current = 'black'
                     root.manager.transition.direction = 'left'
@@ -1113,6 +1150,98 @@
                     root.manager.current = 'purple'
                     root.manager.transition.direction = 'left'
                     root.add_screen('blue')
+
+<PurpleScreen>:
+    DefaultScrollView:
+        DefaultBoxLayout:
+            DefaultLabel:
+                text: 'В четвёртом этапе наша [color=#FA8C1C]цель[/color] сделать производство [color=#FA8C1C]производственных исследовательских пакетов[/color] (фиолетовых пакетов) и изучить все нужные нам [color=#FA8C1C]технологии. [/color]\nТак как вы прошли уже [color=#FA8C1C]половину[/color] нашего [color=#FA8C1C]гайда[/color] и уже понимаете как строить свои [color=#FA8C1C]производства[/color] дальше не будет рассказываться об [color=#FA8C1C]улучшении построенного.[/color] То есть, если мы построили [color=#FA8C1C]улучшенные элекстросхемы[/color], вам не будет показано когда их надо [color=#FA8C1C]перестраивать[/color] если их стало мало, вы сами должны начинать это [color=#FA8C1C]анализировать[/color] и [color=#FA8C1C]реагировать.[/color] Если вам лень думать самим над [color=#FA8C1C]расчётами[/color] для [color=#FA8C1C]оптимального производства[/color] можете пользоваться [color=#FA8C1C]“Factorio calculator”[/color], очень полезный [color=#FA8C1C]инструмент.[/color] А теперь приступим к производству [color=#FA8C1C]Фиолетовых пакетов.[/color]\n1. Чтобы создать [color=#FA8C1C]фиолетовый пакет,[/color] нам нужно [color=#FA8C1C]30 рельс, 1 электрическая печь и 1 модуль продуктивности.[/color] Производство [color=#FA8C1C]электрических печей[/color] у нас имеется, нам не хватает [color=#FA8C1C]рельс[/color] и [color=#FA8C1C]модулей продуктивности.[/color] Производство [color=#FA8C1C]рельс: [/color]'
+            DefaultImage:
+                source: 'source/gif/4/1.png'
+                on_touch_up: root.go_to_picture('purple', 'source/gif/4/1.png')
+            DefaultLabel:
+                text: '2. Производство [color=#FA8C1C]модулей продуктивности:[/color] '
+            DefaultImage:
+                source: 'source/gif/4/2.png'
+                on_touch_up: root.go_to_picture('purple', 'source/gif/4/2.png')
+            DefaultLabel:
+                text: '3. Производство [color=#FA8C1C]Фиолетовых пакетов:[/color]'
+            DefaultImage:
+                source: 'source/gif/4/3.png'
+                on_touch_up: root.go_to_picture('purple', 'source/gif/4/3.png')
+            DefaultLabel:
+                text: '4. Пора [color=#FA8C1C]исследовать![/color]'
+            DefaultImage:
+                source: 'source/gif/4/4.png'
+                height: 100
+                on_touch_up: root.go_to_picture('purple', 'source/gif/4/4.png')
+            DefaultImage:
+                source: 'source/gif/4/5.png'
+                height: 100
+                on_touch_up: root.go_to_picture('purple', 'source/gif/4/5.png')
+            DefaultLabel:
+                text: 'Важные нам [color=#FA8C1C]технологии:[/color] Автоматизация 3, Бонус вместимости манипулятора 4, Логистика 3, Бонус вместимости манипулятора 5, Грузоподъёмность рабочего дрона 2, Модуль скорости 3, Модуль продуктивности 3, Бонус вместимости манипулятора 6, Скорость лаборатории 5. \n[color=#FA8C1C]Не совсем важные:[/color] Переработка ядреного топлива, Передача эффектов, Сжижение угля, Модуль эффективности 3, Процесс обогащения им. Коварекса.\nПока исследуется расскажем, что делает каждая технология.\n1) [color=#FA8C1C]Автоматизация 3.[/color] Открывает [color=#FA8C1C]Cборочный автомат 3[/color], который замена нашим [color=#FA8C1C]сборочным автоматам 2.[/color] Давайте сделаем его [color=#FA8C1C]производство,[/color] но для этого нам нужно сделать производство [color=#FA8C1C]модулей скорости,[/color] делаются они вот так:'
+            DefaultImage:
+                source: 'source/gif/4/6.png'
+                height: 600
+                on_touch_up: root.go_to_picture('purple', 'source/gif/4/6.png')
+            DefaultLabel:
+                text: 'Производство [color=#FA8C1C]Cборочных автоматов 3:[/color]'
+            DefaultImage:
+                source: 'source/gif/4/7.png'
+                height: 600
+                on_touch_up: root.go_to_picture('purple', 'source/gif/4/7.png')
+            DefaultLabel:
+                text: 'Так как у вас уже много [color=#FA8C1C]сборщиков 2[/color] уровня на [color=#FA8C1C]заводе,[/color] то заменить всё [color=#FA8C1C]сборщиками 3[/color] уровня будет [color=#FA8C1C]проблематично,[/color] поэтому [color=#FA8C1C]рекомендуем[/color] использовать их в дальнейшем для [color=#FA8C1C]новых производств,[/color] либо для [color=#FA8C1C]улучшения[/color] старых.\n2) [color=#FA8C1C]Бонус вместимости манипулятора 4.[/color] [color=#FA8C1C]Бонус вместимости пакетного манипулятора +1.[/color]\n3) [color=#FA8C1C]Логистика 3.[/color] Открывает [color=#FA8C1C]Скоростной конвейер, Подземный экспресс-конвейер, Экспресс-разделитель.[/color] Они замена нашим [color=#FA8C1C]быстрым конвейерам,[/color] [color=#FA8C1C]производство[/color]  каждого из них делается так:'
+            DefaultImage:
+                source: 'source/gif/4/8.png'
+                on_touch_up: root.go_to_picture('purple', 'source/gif/4/8.png')
+                height: 400
+            DefaultImage:
+                source: 'source/gif/4/9.png'
+                on_touch_up: root.go_to_picture('purple', 'source/gif/4/9.png')
+                height: 400
+            DefaultImage:
+                source: 'source/gif/4/10.png'
+                on_touch_up: root.go_to_picture('purple', 'source/gif/4/10.png')
+                height: 400
+            DefaultLabel:
+                text: 'Также как и со [color=#FA8C1C]сборщиками 3 уровня,[/color] заменяйте всё на заводе [color=#FA8C1C]скоростными конвейерами, разделителями, подземными[/color] когда это [color=#FA8C1C]нужно,[/color] или когда [color=#FA8C1C]строите[/color] что-то новое.\n4) [color=#FA8C1C]Бонус вместимости манипулятора 5 и 6.[/color] Бонус вместимости [color=#FA8C1C]пакетного манипулятора +2.[/color]\n5) [color=#FA8C1C]Грузоподъёмность рабочего дрона 2.[/color] Грузоподъёмность дронов +1.\n6) [color=#FA8C1C]Модуль скорости 3.[/color] Открывает [color=#FA8C1C]Модуль скорости 3.[/color]\n7) [color=#FA8C1C]Модуль продуктивности 3.[/color] Открывает [color=#FA8C1C]Модуль продуктивности 3.[/color]\n8) [color=#FA8C1C]Скорость лаборатории 5.[/color] Бонус [color=#FA8C1C]скорости[/color] исследований в [color=#FA8C1C]лабораториях: +50%.[/color]'
+            DefaultLabel:
+                text: 'Технологии по желанию.'
+                halign: 'center'
+            DefaultLabel:
+                text: '1) Про технологии [color=#FA8C1C]Переработка ядреного топлива[/color] и [color=#FA8C1C]Процесс обогащения им.[/color] [color=#FA8C1C]Коварекса[/color] говорится подробнее в дополнительной главе [color=#FA8C1C]“Урановые технологии”.[/color] \n2) [color=#FA8C1C]Передача эффектов.[/color] Открывает [color=#FA8C1C]Маяк,[/color] который передаёт [color=#FA8C1C]эффекты модулей[/color] на ближайшие [color=#FA8C1C]дружественные объекты[/color] в [color=#FA8C1C]жёлтой области.[/color]'
+            DefaultImage:
+                source: 'source/gif/4/11.png'
+                on_touch_up: root.go_to_picture('purple', 'source/gif/4/11.png')
+            DefaultLabel:
+                text: '3) [color=#FA8C1C]Сжижение угля.[/color] Открывает [color=#FA8C1C]рецепт Сжижение угля[/color] в [color=#FA8C1C]нефтеперерабатывающем заводе.[/color]\n4) [color=#FA8C1C]Модуль эффективности 3.[/color] Открывает [color=#FA8C1C]Модуль эффективности 3.[/color]'
+            DefaultLabel:
+                text: 'Новичок за работой!'
+                halign: 'center'
+            DefaultLabel:
+                text: 'Поздравляем вы прошли [color=#FA8C1C]четвёртый этап.[/color] Теперь вы можете поставить игру на паузу и посмотреть на продвижение нашего [color=#FA8C1C]Новичка.[/color] Давайте посмотрим что он сделал за несколько часов игры.'
+            DefaultImage:
+                source: 'source/gif/4/12.png'
+                height: 800
+                on_touch_up: root.go_to_picture('purple', 'source/gif/4/12.png')
+            DefaultLabel:
+                text: 'База Новичка - панорама'
+                halign: 'center'
+            DefaultLabel:
+                text: 'Честно, найти различия в [color=#FA8C1C]базе Новичка[/color] на прошлом этапе и на этом довольно сложно. Всё что мы можем сказать, что он сделал [color=#FA8C1C]фиолетовый пакет[/color] и в своём темпе старается изучать [color=#FA8C1C]технологии[/color] и старается [color=#FA8C1C]оптимизировать[/color] своё [color=#FA8C1C]производство.[/color] Так что в этом и следующих [color=#FA8C1C]этапах[/color] вам будут показаны только [color=#FA8C1C]панорама[/color] так как его [color=#FA8C1C]база[/color] не будет отличаться от прошлой. Прогресс не сильно большой.'
+            DefaultLabel:
+                text: 'Ваш завод ещё жив?!'
+                halign: 'center'
+            DefaultLabel:
+                text: 'Вы прошли [color=#FA8C1C]четвёртый этап[/color] нашего гайда. Надеемся, что у вас ещё не кончилась ваша [color=#FA8C1C]нефть,[/color] чтобы не бежать и искать [color=#FA8C1C]новую[/color] и вас ещё не сильно донимают [color=#FA8C1C]кусаки,[/color] если это так, то [color=#FA8C1C]чёрный пакет и военные технологии[/color] ваше всё, можете посмотреть перед следующим [color=#FA8C1C]этапом[/color], если вас сильно донимают эти не [color=#FA8C1C]дружелюбные существа[/color]. А если у вас всё прекрасно, то мы продолжаем наше [color=#FA8C1C]прохождение.[/color]'
+            ArticleButton:
+                text: '[color=#FA8C1C]V[/color] Контроль'
+                on_release:
+                    root.manager.current = 'yellow'
+                    root.manager.transition.direction = 'left'
+                    root.add_screen('purple')
 
 
 

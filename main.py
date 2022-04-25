@@ -58,14 +58,18 @@ class GreenScreen(DefaultScreen):
 class BlueScreen(DefaultScreen):
     pass
 
+
 class PurpleScreen(DefaultScreen):
     pass
+
 
 class YellowScreen(DefaultScreen):
     pass
 
+
 class WhiteScreen(DefaultScreen):
     pass
+
 
 class BlackScreen(DefaultScreen):
     pass
@@ -82,7 +86,11 @@ class PictureScreen(Screen):
 class PersonalScreen(DefaultScreen):
     pass
 
+
 class TrainScreen(DefaultScreen):
+    pass
+
+class FinalScreen(DefaultScreen):
     pass
 
 
@@ -144,6 +152,7 @@ class App(MDApp):
         sm.add_widget(pictureScreen)
         sm.add_widget((PersonalScreen(name='personal')))
         sm.add_widget(TrainScreen(name='train'))
+        sm.add_widget(FinalScreen(name='final'))
         return sm
 
 

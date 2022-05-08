@@ -1341,7 +1341,7 @@
                 text: 'Финал близок?'
                 halign: 'center'
             DefaultLabel:
-                text: 'Вы прошли [color=#FA8C1C]пятый этап[/color] нашего гайда. Вам остался [color=#FA8C1C]последний рывок[/color] и вы [color=#FA8C1C]пройдёте игру.[/color] Теперь вы сделали производства всех пакетов, которые вам нужны для запуска ракеты. А мы без долгих подведений итогов мы плавно переходим к ф[color=#FA8C1C]инальному этапу[/color] нашего гайда.'
+                text: 'Вы прошли [color=#FA8C1C]пятый этап[/color] нашего гайда. Вам остался [color=#FA8C1C]последний рывок[/color] и вы [color=#FA8C1C]пройдёте игру.[/color] Теперь вы сделали производства всех пакетов, которые вам нужны для запуска ракеты. А мы без долгих подведений итогов мы плавно переходим к [color=#FA8C1C]финальному этапу[/color] нашего гайда.'
             ArticleButton:
                 text: 'Финал'
                 on_release:
@@ -1349,6 +1349,78 @@
                     root.manager.transition.direction = 'left'
                     root.add_screen('yellow')
 
+<FinalScreen>:
+    DefaultScrollView:
+        DefaultBoxLayout:
+            DefaultLabel:
+                text: 'В финальном этапе наша [color=#FA8C1C]цель[/color] не сделать производство какого-то либо [color=#FA8C1C]пакета.[/color] Ликуйте, мы [color=#FA8C1C]сделали[/color] все нужные нам [color=#FA8C1C]пакеты[/color] и [color=#FA8C1C]исследовали[/color] всё, что нам [color=#FA8C1C]нужно.[/color] В этом этапе мы [color=#FA8C1C]создаём[/color] и [color=#FA8C1C]запускаем Ракету![/color]\n1) Для начала создадим [color=#FA8C1C]Ракетную шахту,[/color] для неё нам надо [color=#FA8C1C]1к стальных балок, 200 процессоров, 200 электродвигателей, 100 труб и 1к бетона.[/color] \n2) У нас нет производства [color=#FA8C1C]бетона,[/color] давайте его сделаем:'
+            DefaultImage:
+                source: 'source/gif/6/1.png'
+                on_touch_up: root.go_to_picture('final', 'source/gif/6/1.png')
+            DefaultLabel:
+                text: 'Теперь у нас есть всё, чтобы [color=#FA8C1C]создать Ракету[/color] и поставить её. Она [color=#FA8C1C]большая,[/color] так что [color=#FA8C1C]поставьте[/color] её туда где есть место.'
+            DefaultImage:
+                source: 'source/gif/6/2.png'
+                on_touch_up: root.go_to_picture('final', 'source/gif/6/2.png')
+            DefaultLabel:
+                text: '3) Чтобы запустить [color=#FA8C1C]Ракету,[/color] её надо [color=#FA8C1C]собрать.[/color] Для того чтобы создать одну [color=#FA8C1C]деталь[/color] в [color=#FA8C1C]Ракетной шахте[/color] нужно [color=#FA8C1C]10 блоков управления ракеты, 10 конструкций малой плотности и 10 ракетного топлива.[/color] Из этого у нас есть только [color=#FA8C1C]конструкции малой плотности.[/color] Давайте сделаем производство [color=#FA8C1C]блоков управления ракеты:[/color] '
+            DefaultImage:
+                source: 'source/gif/6/3.png'
+                on_touch_up: root.go_to_picture('final', 'source/gif/6/3.png')
+            DefaultLabel:
+                text: '[color=#FA8C1C]Напоминаем,[/color] если у вас перестаёт чего-то хватать, то можно воспользоваться [color=#FA8C1C]Factoro Calculator[/color] для точного [color=#FA8C1C]планирования[/color] своего [color=#FA8C1C]завода.[/color]\n4) Теперь нам нужно производство [color=#FA8C1C]ракетного топлива,[/color] но для него нам нужно ещё [color=#FA8C1C]твёрдое топливо[/color] давайте сделаем его:'
+            DefaultImage:
+                source: 'source/gif/6/4.png'
+                height: 500
+                on_touch_up: root.go_to_picture('final', 'source/gif/6/4.png')
+            DefaultLabel:
+                text: '5) Производство [color=#FA8C1C]ракетного топлива:[/color]'
+            DefaultImage:
+                source: 'source/gif/6/5.png'
+                height: 500
+                on_touch_up: root.go_to_picture('final', 'source/gif/6/5.png')
+            DefaultLabel:
+                text: '6) [color=#FA8C1C]Поздравляем,[/color] у нас есть всё для [color=#FA8C1C]ракеты.[/color] Пришло время провести всё к [color=#FA8C1C]Ракетной шахте.[/color]'
+            DefaultImage:
+                source: 'source/gif/6/6.png'
+                on_touch_up: root.go_to_picture('final', 'source/gif/6/6.png')
+            DefaultLabel:
+                text: '7) Пока создаются [color=#FA8C1C]100 деталей ракеты[/color] создадим [color=#FA8C1C]спутник,[/color] для него нам нужно [color=#FA8C1C]100 процессоров, 100 конструкций малой плотности, 50 ракетного топлива, 100 солнечных панелей, 100 аккумуляторных блоков и 5 радаров.[/color]\n8) Когда шкала заполнится из шахты покажется [color=#FA8C1C]Ракета,[/color] готовая к запуску.'
+            DefaultImage:
+                source: 'source/gif/6/7.png'
+                on_touch_up: root.go_to_picture('final', 'source/gif/6/7.png')
+            DefaultLabel:
+                text: '9) В снаряжение [color=#FA8C1C]ракеты[/color] кладём [color=#FA8C1C]спутник[/color] и нажимаем на кнопку [color=#FA8C1C]“Пуск”[/color]'
+            DefaultImage:
+                source: 'source/gif/6/8.png'
+                on_touch_up: root.go_to_picture('final', 'source/gif/6/8.png')
+            DefaultLabel:
+                text: '10) Наблюдайте как [color=#FA8C1C]Ракета[/color] летит в небо.'
+            DefaultImage:
+                source: 'source/gif/6/9.gif'
+                height: 1200
+                on_touch_up: root.go_to_picture('final', 'source/gif/6/9.gif')
+            DefaultLabel:
+                text: 'C прохождением Factorio!'
+                halign: 'center'
+                font_size: 60
+            DefaultLabel:
+                text: '[color=#FA8C1C]Поздравляем[/color] с прохождением игры, теперь можно выдохнуть, ведь [color=#FA8C1C]цель[/color] игры [color=#FA8C1C]выполнена.[/color] Так же игру прошёл и [color=#FA8C1C]Новичок[/color] за которым мы следили на всех [color=#FA8C1C]этапах[/color] игры. Вот его [color=#FA8C1C]победный[/color] экран:'
+            DefaultImage:
+                source: 'source/gif/6/10.png'
+                height: 600
+                on_touch_up: root.go_to_picture('final', 'source/gif/6/10.png')
+            DefaultLabel:
+                text: 'Надеемся вам [color=#FA8C1C]понравился[/color] наш [color=#FA8C1C]гайд[/color] и вы весело провели время в [color=#FA8C1C]Factorio.[/color] Теперь у вас есть [color=#FA8C1C]три варианта,[/color] пойти играть в новый мир [color=#FA8C1C]“Мир смерти”,[/color] или если у вас ещё остались силы играть в этом мире, то вы можете попробовать автоматизировать производство [color=#FA8C1C]белых пакетов[/color] вместе с нами в дополнительной главе [color=#FA8C1C]“Высокие технологии”.[/color] 3 вариант, пойти скачать [color=#FA8C1C]моды[/color] с официального сайта игры и пройти уже вместе с ними, поверьте с модами это уже совсем другая игра. Очень рекомендуем [color=#FA8C1C]“Crastorio 2”[/color]. Напоследок наша команда выражает тебе, знатоку [color=#FA8C1C]Factorio,[/color] слова [color=#FA8C1C]благодарности,[/color] что ты прошёл с нами этот путь. Можешь [color=#FA8C1C]порекомендовать[/color] [color=#FA8C1C]Factorio[/color] своим друзьям и наш [color=#FA8C1C]гайд,[/color] либо пройти с ним в [color=#FA8C1C]совместной игре,[/color] обучая тому, чему мы обучили тебя'
+            DefaultLabel:
+                text: 'Удачи!'
+                halign: 'center'
+            ArticleButton:
+                text: 'Высокие технологии'
+                on_release:
+                    root.manager.current = ''
+                    root.manager.transition.direction = 'left'
+                    root.add_screen('final')
 
 
 <BlackScreen>:

@@ -1422,6 +1422,48 @@
                     root.manager.transition.direction = 'left'
                     root.add_screen('final')
 
+<DefenceScreen>:
+    DefaultScrollView:
+        DefaultBoxLayout:
+            DefaultLabel:
+                text: 'Добро пожаловать в [color=#FA8C1C]дополнительный этап[/color] по [color=#FA8C1C]защите базы[/color] в нашем [color=#FA8C1C]гайде[/color] по [color=#FA8C1C]Factorio.[/color] Как оказалось на планете кроме вас есть ещё и монстры ([color=#FA8C1C]Кусаки, Плеваки и Черви[/color]). У каждого из них своя [color=#FA8C1C]роль.[/color] Есть два типа [color=#FA8C1C]ульев[/color]: [color=#FA8C1C]Кусак[/color](бледно-жёлтого цвета) и [color=#FA8C1C]Плевак[/color](бледно-красного цвета). Вот примерное их [color=#FA8C1C]поселение:[/color]'
+            DefaultImage:
+                source: 'source/gif/1A/1.png'
+                on_touch_up: root.go_to_picture('defence', 'source/gif/1A/1.png')
+            DefaultLabel:
+                text: '[color=#FA8C1C]Кусаки[/color] – монстры [color=#FA8C1C]ближнего[/color] боя, они идут на пролом и кусают. \n[color=#FA8C1C]Плеваки[/color] – монстры [color=#FA8C1C]дальнего[/color] боя, они плюют в игрока пытаясь [color=#FA8C1C]предугадать[/color] его дальнейшие действия. Также след от плевка остаётся на земле какое-то время, и если игрок наступит на него, то начнёт получать [color=#FA8C1C]урон[/color].\n[color=#FA8C1C]Черви[/color] — монстры [color=#FA8C1C]дальнего[/color] боя такие же как и [color=#FA8C1C]плеваки[/color], но имеют большую [color=#FA8C1C]дальность[/color] и не двигаются с места.'
+            DefaultLabel:
+                text: 'По всему пути игры вас будут встречать только [color=#FA8C1C]3[/color] таких [color=#FA8C1C]типа[/color] монстров, но они [color=#FA8C1C]эволюционируют!![/color] Как понять, что они [color=#FA8C1C]эволюционировали?[/color] Легко, они [color=#FA8C1C]поменялись[/color] в [color=#FA8C1C]цвете[/color] и [color=#FA8C1C]размерах.[/color] Тогда по какому [color=#FA8C1C]фактору[/color] они [color=#FA8C1C]эволюционируют?[/color] Есть [color=#FA8C1C]три фактора:[/color]\n1. Прошедшее [color=#FA8C1C]время[/color] в игре. Увеличивает [color=#FA8C1C]фактор[/color] на [color=#FA8C1C]0.000004[/color]\n2. Производство загрязнения. Увеличивает [color=#FA8C1C]фактор[/color] на [color=#FA8C1C]0.000015[/color]\n3. Уничтожение [color=#FA8C1C]ульев.[/color] Увеличивает [color=#FA8C1C]фактор[/color] на [color=#FA8C1C]0.002[/color]\nТак же прикладываем табличку взятую с [color=#FA8C1C]википедии[/color] по [color=#FA8C1C]Factorio.[/color]'
+            DefaultImage:
+                source: 'source/gif/1A/2.png'
+                on_touch_up: root.go_to_picture('defence', 'source/gif/1A/2.png')
+            DefaultLabel:
+                text: 'Чтобы узнать какой [color=#FA8C1C]фактор эволюции[/color] на данный момент, нужно навестись на [color=#FA8C1C]улей[/color] и там будет написан [color=#FA8C1C]фактор.[/color]'
+            DefaultImage:
+                source: 'source/gif/1A/3.png'
+                on_touch_up: root.go_to_picture('defence', 'source/gif/1A/3.png')
+            DefaultLabel:
+                text: 'Либо в [color=#FA8C1C]чате[/color] написать [color=#FA8C1C]/evolution[/color] (что конечно удобнее).'
+            DefaultImage:
+                source: 'source/gif/1A/4.png'
+                height: 50
+                on_touch_up: root.go_to_picture('defence', 'source/gif/1A/4.png')
+            DefaultLabel:
+                text: 'Как же от них [color=#FA8C1C]защищаться[/color]? В данном [color=#FA8C1C]этапе[/color] мы поговорим, про [color=#FA8C1C]защиту базы[/color] на [color=#FA8C1C]начальном этапе[/color] игры, про более [color=#FA8C1C]серьёзные[/color] будет идти речь в [color=#FA8C1C]дополнительной главе “Военные технологии”.[/color] Если на вас уже [color=#FA8C1C]нападают[/color] представители [color=#FA8C1C]Больших Кусак, плевак,[/color] то рекомендуем сразу перейти к той [color=#FA8C1C]главе[/color] и начать [color=#FA8C1C]исследовать[/color] более серьёзные [color=#FA8C1C]технологии.[/color]'
+            ArticleButton:
+                text: 'Военные технологии'
+                on_release:
+                    root.manager.current = 'black'
+                    root.manager.transition.direction = 'left'
+                    root.add_screen('defence')
+            DefaultLabel:
+                text: 'Как же можно [color=#FA8C1C]защититься[/color] от них на [color=#FA8C1C]ранних этапах[/color] игры? Используя [color=#FA8C1C]турели[/color] и [color=#FA8C1C]стены,[/color] ответим вам мы. Вы Просто можете [color=#FA8C1C]поставить[/color] по периметру базы [color=#FA8C1C]турели,[/color] закрыв их [color=#FA8C1C]стенами:[/color]'
+            DefaultImage:
+                source: 'source/gif/1A/5.png'
+                on_touch_up: root.go_to_picture('defence', 'source/gif/1A/5.png')
+            DefaultLabel:
+                text: 'Тут у вас есть выбор, либо вы сами носите [color=#FA8C1C]патроны[/color] до турелей, или делаете их [color=#FA8C1C]производство[/color] и ведёте к ним через [color=#FA8C1C]конвейеры.[/color] [color=#FA8C1C]Производство патронов[/color] мы вам рекомендуем сделать, но доставлять сильного смысла не имеет. Вы можете спокойно прожить просто, относя [color=#FA8C1C]патроны[/color] до [color=#FA8C1C]турелей.[/color] Так как монстры в начале [color=#FA8C1C]слабые.[/color] А если ещё изучить технологию [color=#FA8C1C]Военная промышленность 2,[/color] то монстры просто будут расстворяться.\nНа этом информация по [color=#FA8C1C]защите базы[/color] на [color=#FA8C1C]раннем этапе[/color] игры подошла к концу, теперь продолжайте следовать [color=#FA8C1C]основному гайду.[/color]'
+
 
 <BlackScreen>:
     DefaultScrollView:

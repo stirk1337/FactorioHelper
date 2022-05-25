@@ -183,18 +183,6 @@
                     halign: 'center'
             MySwiper:
                 on_touch_up:
-                    root.manager.current = 'personal'
-                    root.manager.transition.direction = 'left'
-                    root.add_screen('menu')
-                FitImage:
-                    source: "source/pictures/personal.png"
-                    radius: [20,]
-                DefaultLabel:
-                    text: 'Персональное оборудование'
-                    font_size: 45
-                    halign: 'center'
-            MySwiper:
-                on_touch_up:
                     root.manager.current = 'train'
                     root.manager.transition.direction = 'left'
                     root.add_screen('menu')
@@ -766,15 +754,7 @@
                 source: 'source/gif/2/30.gif'
                 on_touch_up: root.go_to_picture('green', 'source/gif/2/30.gif')
             DefaultLabel:
-                text: '3) Про технологии: [color=#FA8C1C]Портативная солнечная панель, Личный аккумулятор, Оборудование для игнорирования конвейеров, Прибор ночного видения,[/color] будет рассказано в дополнительной главе [color=#FA8C1C]“Персональное оборудование”[/color]'
-            ArticleButton:
-                text: 'Персональное оборудование'
-                on_release:
-                    root.manager.current = 'personal'
-                    root.manager.transition.direction = 'left'
-                    root.add_screen('green')
-            DefaultLabel:
-                text: '4) [color=#FA8C1C]Модуль эффективности.[/color] Открывает [color=#FA8C1C]Модуль эффективности,[/color] который понижает [color=#FA8C1C]энергопотребление машины.[/color]\n5) [color=#FA8C1C]Горючие жидкости.[/color] Открывает новую ветку [color=#FA8C1C]технологий,[/color] которые понадобятся нам в будущем, но не на данный момент. \n6) Про технологии: [color=#FA8C1C]Железные дороги, Автоматизация железных дорог, Железнодорожные сигналы, Вагон-цистерна,[/color] будет рассказано в дополнительной главе [color=#FA8C1C]“Железные дороги”[/color]'
+                text: '3) [color=#FA8C1C]Портативная солнечная панель.[/color] Открывает [color=#FA8C1C]Портативную солнечную панель,[/color] которая вставляется в слоты [color=#FA8C1C]брони[/color] и даёт [color=#FA8C1C]энергию[/color] другим [color=#FA8C1C]предметам[/color] в [color=#FA8C1C]сетке.[/color]\n4) [color=#FA8C1C]Личный аккумулятор.[/color] Открывает [color=#FA8C1C]Личный аккумулятор,[/color] который вставляется в [color=#FA8C1C]броню[/color] и хранит излишки [color=#FA8C1C]энергии[/color] в [color=#FA8C1C]броне.[/color]\n5) [color=#FA8C1C]Оборудование для игнорирования конвейеров.[/color] Открывает [color=#FA8C1C]Оборудование для игнорирования конвейеров,[/color] которое вставляется в [color=#FA8C1C]броню[/color] и не позволяет [color=#FA8C1C]конвейерам[/color] вас двигать.\n6) [color=#FA8C1C]Прибор ночного видения.[/color] Открывает [color=#FA8C1C]Прибор ночного видения,[/color] который вставляется в [color=#FA8C1C]броню[/color] и позволяет лучше [color=#FA8C1C]видеть[/color] ночью.\n7) [color=#FA8C1C]Модуль эффективности.[/color] Открывает [color=#FA8C1C]Модуль эффективности,[/color] который понижает [color=#FA8C1C]энергопотребление машины.[/color]\n8) [color=#FA8C1C]Горючие жидкости.[/color] Открывает новую ветку [color=#FA8C1C]технологий,[/color] которые понадобятся нам в будущем, но не на данный момент. \n9) Про технологии: [color=#FA8C1C]Железные дороги, Автоматизация железных дорог, Железнодорожные сигналы, Вагон-цистерна,[/color] будет рассказано в дополнительной главе [color=#FA8C1C]“Железные дороги”[/color]'
             ArticleButton:
                 text: 'Железные дороги'
                 on_release:
@@ -782,22 +762,22 @@
                     root.manager.transition.direction = 'left'
                     root.add_screen('green')
             DefaultLabel:
-                text: '7) [color=#FA8C1C]Взрывчатые вещества.[/color] Открывает [color=#FA8C1C]Взрывчатку,[/color] которая является новым рецептом в [color=#FA8C1C]химическом заводе.[/color]\n8) [color=#FA8C1C]Пояс для инструментов.[/color] Количество [color=#FA8C1C]слотов[/color] инвентаря [color=#FA8C1C]+10.[/color]\n9) [color=#FA8C1C]Ворота.[/color] Открывает [color=#FA8C1C]Ворота,[/color] которые открываются, только [color=#FA8C1C]игроку[/color] и [color=#FA8C1C]любому транспорту.[/color]'
+                text: '10) [color=#FA8C1C]Взрывчатые вещества.[/color] Открывает [color=#FA8C1C]Взрывчатку,[/color] которая является новым рецептом в [color=#FA8C1C]химическом заводе.[/color]\n11) [color=#FA8C1C]Пояс для инструментов.[/color] Количество [color=#FA8C1C]слотов[/color] инвентаря [color=#FA8C1C]+10.[/color]\n12) [color=#FA8C1C]Ворота.[/color] Открывает [color=#FA8C1C]Ворота,[/color] которые открываются, только [color=#FA8C1C]игроку[/color] и [color=#FA8C1C]любому транспорту.[/color]'
             DefaultImage:
                 source: 'source/gif/2/31.gif'
                 on_touch_up: root.go_to_picture('green', 'source/gif/2/31.gif')
             DefaultLabel:
-                text: '10) [color=#FA8C1C]Взрывчатка для скал.[/color] Открывает [color=#FA8C1C]Взрывчатку для скал,[/color] с помощью которой можно взрывать [color=#FA8C1C]скалы[/color] расположенные в [color=#FA8C1C]мире,[/color] при этом она не наносит урон [color=#FA8C1C]сооружениям[/color]'
+                text: '13) [color=#FA8C1C]Взрывчатка для скал.[/color] Открывает [color=#FA8C1C]Взрывчатку для скал,[/color] с помощью которой можно взрывать [color=#FA8C1C]скалы[/color] расположенные в [color=#FA8C1C]мире,[/color] при этом она не наносит урон [color=#FA8C1C]сооружениям[/color]'
             DefaultImage:
                 source: 'source/gif/2/32.gif'
                 on_touch_up: root.go_to_picture('green', 'source/gif/2/32.gif')
             DefaultLabel:
-                text: '11) [color=#FA8C1C]Бетон.[/color] Открывает [color=#FA8C1C]Бетон. Бетон с разметкой опасности, Железобетон и Железобетон с разметкой опасности.[/color] Бетон увеличивает [color=#FA8C1C]скорость ходьбы[/color] на [color=#FA8C1C]40%.[/color] А [color=#FA8C1C]Железобетон[/color] на [color=#FA8C1C]50%.[/color] [color=#FA8C1C]Разметка опасности,[/color] это аналог того или иного [color=#FA8C1C]бетона,[/color] просто с красивой разметкой.'
+                text: '14) [color=#FA8C1C]Бетон.[/color] Открывает [color=#FA8C1C]Бетон. Бетон с разметкой опасности, Железобетон и Железобетон с разметкой опасности.[/color] Бетон увеличивает [color=#FA8C1C]скорость ходьбы[/color] на [color=#FA8C1C]40%.[/color] А [color=#FA8C1C]Железобетон[/color] на [color=#FA8C1C]50%.[/color] [color=#FA8C1C]Разметка опасности,[/color] это аналог того или иного [color=#FA8C1C]бетона,[/color] просто с красивой разметкой.'
             DefaultImage:
                 source: 'source/gif/2/33.png'
                 on_touch_up: root.go_to_picture('green', 'source/gif/2/33.png')
             DefaultLabel:
-                text: '12) [color=#FA8C1C]Усиленная взрывчатка 1.[/color] Увеличивает [color=#FA8C1C]урон гранат[/color] на [color=#FA8C1C]25%.[/color]\n13) [color=#FA8C1C]Огнестрельный урон 2.[/color] Увеличивает урон от [color=#FA8C1C]пуль, дроби[/color] на [color=#FA8C1C]10%[/color] и [color=#FA8C1C]урон[/color] от [color=#FA8C1C]пулемётных турелей[/color] на [color=#FA8C1C]10%.[/color]\n14) [color=#FA8C1C]Скорострельность оружия 2.[/color] Увеличивает скорость стрельбы [color=#FA8C1C]пулями[/color] и [color=#FA8C1C]дробью[/color] на [color=#FA8C1C]10%.[/color]\nБесполезное исследование.\n[color=#FA8C1C]Логическая сеть.[/color] Можете его не исследовать, оно нам не понадобится т.к открывет много неважных штук.'
+                text: '15) [color=#FA8C1C]Усиленная взрывчатка 1.[/color] Увеличивает [color=#FA8C1C]урон гранат[/color] на [color=#FA8C1C]25%.[/color]\n16) [color=#FA8C1C]Огнестрельный урон 2.[/color] Увеличивает урон от [color=#FA8C1C]пуль, дроби[/color] на [color=#FA8C1C]10%[/color] и [color=#FA8C1C]урон[/color] от [color=#FA8C1C]пулемётных турелей[/color] на [color=#FA8C1C]10%.[/color]\n17) [color=#FA8C1C]Скорострельность оружия 2.[/color] Увеличивает скорость стрельбы [color=#FA8C1C]пулями[/color] и [color=#FA8C1C]дробью[/color] на [color=#FA8C1C]10%.[/color]\nБесполезное исследование.\n[color=#FA8C1C]Логическая сеть.[/color] Можете его не исследовать, оно нам не понадобится т.к открывет много неважных штук.'
             DefaultLabel:
                 text: 'Новичок за работой!'
                 halign: 'center'

@@ -83,10 +83,6 @@ class PictureScreen(Screen):
     pass
 
 
-class PersonalScreen(DefaultScreen):
-    pass
-
-
 class TrainScreen(DefaultScreen):
     pass
 
@@ -150,7 +146,6 @@ class App(MDApp):
         sm.add_widget(BlackScreen(name='black'))
         sm.add_widget(DefenceScreen(name='defence'))
         sm.add_widget(pictureScreen)
-        sm.add_widget((PersonalScreen(name='personal')))
         sm.add_widget(TrainScreen(name='train'))
         sm.add_widget(FinalScreen(name='final'))
         return sm

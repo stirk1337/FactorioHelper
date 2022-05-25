@@ -1495,3 +1495,26 @@
                     root.manager.current = 'white'
                     root.manager.transition.direction = 'left'
                     root.add_screen('black')
+
+<TrainScreen>:
+    DefaultScrollView:
+        DefaultBoxLayout:
+            DefaultLabel:
+                text: 'В этой [color=#FA8C1C]дополнительной главе[/color] мы поговорим про одну из самых [color=#FA8C1C]сложных[/color] тем для новичков в Factorio, железные дороги. Почему они сложные? Ответ прост, они не интуитивно понятны человеку, который не знает некоторые фишки с [color=#FA8C1C]железнодорожной системы.[/color] В Факторио есть [color=#FA8C1C]4 исследования,[/color] которые связаны с [color=#FA8C1C]железной дорогой[/color] ими являются: [color=#FA8C1C]Железные дороги, Автоматизация железных дорог, Железнодорожные сигналы, Вагон-цистерна.[/color] Начнём по порядку.\n1. [color=#FA8C1C]Исследуем технологию Железеные дороги[/color] и получаем [color=#FA8C1C]Рельсы, Локомотив и Грузовой вагон.[/color] Всё просто: [color=#FA8C1C]локомотив[/color] везёт [color=#FA8C1C]грузовые вагоны[/color] и едет по [color=#FA8C1C]рельсам.[/color]\n2. Исследуем [color=#FA8C1C]технологию[/color] [color=#FA8C1C]Автоматизация железных дорог[/color] и получим [color=#FA8C1C]Железнодорожную станцию[/color]. [color=#FA8C1C]Железнодорожная станция[/color] является пунктом перед которым останавливается [color=#FA8C1C]локомотив[/color] и выполняет одну из [color=#FA8C1C]условий ожиданий,[/color] которая описана в нём для этой [color=#FA8C1C]станции.[/color]'
+            DefaultImage:
+                source: 'source/gif/3A/1.png'
+                on_touch_up: root.go_to_picture('train', 'source/gif/3A/1.png')
+            DefaultLabel:
+                text: 'И ещё полезный [color=#FA8C1C]скриншот[/color] стоянки для [color=#FA8C1C]локомотивов:[/color]'
+            DefaultImage:
+                source: 'source/gif/3A/2.png'
+                height: 600
+                on_touch_up: root.go_to_picture('train', 'source/gif/3A/2.png')
+            DefaultLabel:
+                text: '3. Исследуем технологию [color=#FA8C1C]Железнодорожные сигналы[/color] и получаем [color=#FA8C1C]Ж/д светофор[/color] и [color=#FA8C1C]Проходной ж/д светофор.[/color] [color=#FA8C1C]Ж/д светофор[/color] смотрит есть ли перед ним [color=#FA8C1C]локомотив,[/color] если он есть, то становится [color=#FA8C1C]красным.[/color] Когда два [color=#FA8C1C]светофора соединяются друг с другом,[/color] то они образуют некий [color=#FA8C1C]отрезок[/color] и если [color=#FA8C1C]локомотив[/color] повляется в этом [color=#FA8C1C]отрезке,[/color] то [color=#FA8C1C]светофор[/color] перед ним становится [color=#FA8C1C]красным.[/color] [color=#FA8C1C]Проходной ж/д светофор[/color] смотрит какого цвета [color=#FA8C1C]светофоры[/color] на развилке. Если на развилке все [color=#FA8C1C]светофоры зелёные[/color], то проходной будет светиться [color=#FA8C1C]зелёным[/color], если хоть один [color=#FA8C1C]красный[/color], то [color=#FA8C1C]синим[/color], если все [color=#FA8C1C]красные[/color], то [color=#FA8C1C]красным.[/color] Если на развилке не будет [color=#FA8C1C]проходного светофора,[/color] то [color=#FA8C1C]локомотив[/color] просто откажется ехать.\n4. Последнее [color=#FA8C1C]исследование Вагон-цистерна.[/color] Открывает [color=#FA8C1C]Вагон-цистерну,[/color] с помощью которой вы сможете [color=#FA8C1C]транспортировать жидкости.[/color]\nЕсть ещё один [color=#FA8C1C]совет,[/color] никогда не заставляйте [color=#FA8C1C]локомотив[/color] ездить туда обратно по тому же [color=#FA8C1C]пути[/color], если он будет один ездить по этому отрезку, то всё будет хорошо, но если [color=#FA8C1C]локомотивов[/color] уже станет несколько, то они откажуться ехать. Делайте [color=#FA8C1C]круговые маршруты[/color] для [color=#FA8C1C]локомотивов.[/color] Для этого вам понадовятся [color=#FA8C1C]развилки,[/color] рекомендуем [color=#FA8C1C]круговой перекрёсток.[/color] Выглядит он так, пользуйтесь на здоровье:'
+            DefaultImage:
+                source: 'source/gif/3A/3.png'
+                on_touch_up: root.go_to_picture('train', 'source/gif/3A/3.png')
+                height: 500
+            DefaultLabel:
+                text: 'На этом по [color=#FA8C1C]поездам[/color] у нас всё, продолжайте следовать основному [color=#FA8C1C]гайду.[/color]'

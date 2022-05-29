@@ -86,6 +86,9 @@ class PictureScreen(Screen):
 class TrainScreen(DefaultScreen):
     pass
 
+class UranScreen(DefaultScreen):
+    pass
+
 class FinalScreen(DefaultScreen):
     pass
 
@@ -147,6 +150,7 @@ class App(MDApp):
         sm.add_widget(DefenceScreen(name='defence'))
         sm.add_widget(pictureScreen)
         sm.add_widget(TrainScreen(name='train'))
+        sm.add_widget(UranScreen(name='uran'))
         sm.add_widget(FinalScreen(name='final'))
         return sm
 
